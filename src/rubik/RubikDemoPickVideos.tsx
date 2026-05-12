@@ -1,6 +1,11 @@
-import { useEffect, useId, useRef, useState } from "react";
-import { Link } from "react-router-dom";
-import { RUBIK_DEMO_VIDEOS } from "./constants/demoVideos";
+import { useId, useState } from 'react'
+import { Link } from 'react-router-dom'
+import { RUBIK_DEMO_VIDEOS } from './constants/demoVideos'
+import {
+  isYouTubeShortsUrl,
+  isYouTubeUrl,
+  toYouTubeEmbedUrl,
+} from './youtubeEmbed'
 
 /**
  * Demo video: mặc định ẩn — một nút chuyển tiếp mở panel hai clip,
@@ -8,17 +13,8 @@ import { RUBIK_DEMO_VIDEOS } from "./constants/demoVideos";
  */
 export function RubikDemoPickVideos() {
   const [open, setOpen] = useState(false);
-  const panelRef = useRef<HTMLDivElement>(null);
   const panelId = useId();
   const triggerId = useId();
-
-  useEffect(() => {
-    if (!open && panelRef.current) {
-      for (const el of panelRef.current.querySelectorAll("video") as any) {
-        el.pause();
-      }
-    }
-  }, [open]);
 
   return (
     <section
@@ -62,7 +58,6 @@ export function RubikDemoPickVideos() {
 
       <div
         id={panelId}
-        ref={panelRef}
         role="region"
         aria-labelledby={triggerId}
         className={`overflow-hidden transition-[max-height,opacity] duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${open ? "max-h-[8000px] opacity-100" : "max-h-0 opacity-0"}`}
@@ -119,16 +114,38 @@ export function RubikDemoPickVideos() {
 
                   <div className="px-3.5 md:px-4">
                     {demo.src ? (
-                      <div className="overflow-hidden rounded-lg bg-black ring-1 ring-white/10">
-                        <video
-                          className="aspect-video w-full object-cover"
-                          controls
-                          playsInline
-                          preload="metadata"
-                          src={demo.src}
-                          aria-label={`Video demo: ${demo.title}`}
-                        />
-                      </div>
+                      open ? (
+                        isYouTubeUrl(demo.src) ? (
+                          <div
+                            className={
+                              isYouTubeShortsUrl(demo.src)
+                                ? "relative mx-auto h-[min(50svh,380px)] w-[min(100%,min(18rem,calc(min(50svh,380px)*9/16)))] overflow-hidden rounded-lg bg-black ring-1 ring-white/10 md:h-[min(74dvh,640px)] md:w-[min(100%,min(25rem,calc(min(74dvh,640px)*9/16)))] lg:h-[min(78dvh,680px)] lg:w-[min(100%,min(26rem,calc(min(78dvh,680px)*9/16)))]"
+                                : "relative aspect-video w-full overflow-hidden rounded-lg bg-black ring-1 ring-white/10"
+                            }
+                          >
+                            <iframe
+                              className="absolute inset-0 h-full w-full"
+                              src={toYouTubeEmbedUrl(demo.src)!}
+                              title={`YouTube — ${demo.title}`}
+                              loading="lazy"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                              allowFullScreen
+                              referrerPolicy="strict-origin-when-cross-origin"
+                            />
+                          </div>
+                        ) : (
+                          <div className="overflow-hidden rounded-lg bg-black ring-1 ring-white/10">
+                            <video
+                              className="aspect-video w-full object-cover"
+                              controls
+                              playsInline
+                              preload="metadata"
+                              src={demo.src}
+                              aria-label={`Video demo: ${demo.title}`}
+                            />
+                          </div>
+                        )
+                      ) : null
                     ) : (
                       <div
                         className={
@@ -160,7 +177,8 @@ export function RubikDemoPickVideos() {
                             VITE_RUBIK_DEMO_
                             {demo.id === "advanced" ? "ADVANCED" : "BASIC"}
                             _URL
-                          </code>
+                          </code>{" "}
+                          — file .mp4/.webm hoặc link YouTube (Shorts / watch).
                         </p>
                       </div>
                     )}

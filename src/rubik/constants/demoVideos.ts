@@ -10,7 +10,7 @@ export type RubikDemoVideo = {
   tagline: string
   /** Mục tiêu / lời hứa hiệu suất */
   promise: string
-  /** URL đầy đủ tới file video; để trống thì hiện placeholder tinh tế */
+  /** URL file .mp4/.webm hoặc link YouTube (watch / shorts / youtu.be) — để trống thì placeholder */
   src: string
   matchLabel: string
   matchHref: '/rubik?btype=trung_hoc' | '/rubik?btype=tieu_hoc'
@@ -42,7 +42,7 @@ export const RUBIK_DEMO_VIDEOS: readonly RubikDemoVideo[] = [
     durationLabel: '~25s',
     title: 'Nền cơ bản',
     tagline: 'Đủ thời gian để cảm nhịp',
-    promise: 'Nền vững — ~25″ là mốc thực tế; từ đó mới bay cao hơn.',
+    promise: 'Nền vững sub ~25″ là mốc thực tế; từ đó mới bay cao hơn.',
     src: envUrl('VITE_RUBIK_DEMO_BASIC_URL'),
     matchLabel: 'Story Mode · Tiểu học',
     matchHref: '/rubik?btype=tieu_hoc',
