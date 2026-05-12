@@ -2,6 +2,7 @@ import { useLocation, useSearchParams } from 'react-router-dom'
 import { Seo } from '../components/Seo'
 import { useI18n } from '../i18n/useI18n'
 import { parseBtype } from './constants/btype'
+import { RubikBackToPortfolioFab } from './RubikBackToPortfolioFab'
 import { RubikPage } from './RubikPage'
 import { SplashPage } from './SplashPage'
 import './rubik-scope.css'
@@ -23,6 +24,7 @@ export function RubikEntry() {
         path={path || '/rubik'}
       />
       {btype ? <RubikPage /> : <SplashPage />}
+      <RubikBackToPortfolioFab />
     </div>
   )
 }
