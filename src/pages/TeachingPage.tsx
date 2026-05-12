@@ -1,5 +1,6 @@
 import type { FormEvent } from 'react'
 import { useEffect, useRef, useState } from 'react'
+import { Seo } from '../components/Seo'
 import { TEACHING_LOGIC_DETAIL_URL } from '../i18n/constants'
 import { yearsSinceCareerStartPlus } from '../i18n/careerYears'
 import { useI18n } from '../i18n/useI18n'
@@ -33,6 +34,11 @@ export function TeachingPage() {
 
   return (
     <div className="mx-auto max-w-max-width px-gutter py-xl">
+      <Seo
+        title={t('seo.teaching.title')}
+        description={t('seo.teaching.description')}
+        path="/teaching"
+      />
       {codeDetailToast ? (
         <div
           role="status"

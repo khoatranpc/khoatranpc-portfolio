@@ -1,10 +1,24 @@
 import { useMemo } from 'react'
 import { Link } from 'react-router-dom'
+import { Seo } from '../components/Seo'
 import { yearsSinceCareerStartPlus } from '../i18n/careerYears'
 import { useI18n } from '../i18n/useI18n'
+import { absoluteUrl } from '../seo/site'
 
 export function HomePage() {
   const { t } = useI18n()
+
+  const personJsonLd = useMemo(
+    () => ({
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: t('home.legalName'),
+      url: absoluteUrl('/'),
+      sameAs: ['https://github.com/khoatranpc'],
+      jobTitle: t('seo.home.title'),
+    }),
+    [t],
+  )
 
   const stackColumns = useMemo(
     () => [
@@ -35,6 +49,12 @@ export function HomePage() {
 
   return (
     <>
+      <Seo
+        title={t('seo.home.title')}
+        description={t('seo.home.description')}
+        path="/"
+        jsonLd={personJsonLd}
+      />
       <section className="relative mx-auto flex max-w-max-width flex-col items-center gap-lg overflow-hidden px-gutter pb-lg pt-xl md:flex-row">
         <div className="z-10 flex-1 space-y-md">
           <div className="inline-flex items-center gap-xs rounded-full border border-outline-variant bg-surface-container-high px-xs py-1">

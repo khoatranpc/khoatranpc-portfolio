@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Seo } from "../components/Seo";
 import { PROJECT_IMAGES } from "../data/projectMedia";
 import { useI18n } from "../i18n/useI18n";
 
@@ -7,6 +8,11 @@ export function ProjectsPage() {
 
   return (
     <div className="pb-xl pt-xl">
+      <Seo
+        title={t("seo.projects.title")}
+        description={t("seo.projects.description")}
+        path="/projects"
+      />
       <section className="mx-auto max-w-max-width px-gutter py-xl">
         <div className="mb-lg border-l-4 border-secondary pl-md">
           <h1 className="mb-xs font-display-lg text-display-lg">

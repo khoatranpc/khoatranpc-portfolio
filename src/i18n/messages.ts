@@ -112,6 +112,40 @@ export const messages = {
       stackC3R2Label: 'Python / tích hợp & automation',
       stackC3R2Years: '1+ năm',
     },
+    seo: {
+      brandSuffix: ' | Trần Đăng Khoa',
+      siteName: 'Trần Đăng Khoa',
+      home: {
+        title: 'Kỹ sư Fullstack & đào tạo công nghệ',
+        description:
+          'Kỹ sư fullstack và nhà giáo dục công nghệ: hệ thống chịu tải cao, tích hợp AI, đào tạo lập trình thực chiến và tư duy logic.',
+      },
+      projects: {
+        title: 'Dự án tiêu biểu',
+        description:
+          'LMS & thi trực tuyến hàng chục nghìn người dùng, realtime chứng khoán, nền tảng giáo dục — hiệu năng, chịu tải và AI.',
+      },
+      experience: {
+        title: 'Kinh nghiệm',
+        description:
+          'Lộ trình kỹ sư phần mềm: backend, microservices, realtime, cloud — dự án production và tech lead.',
+      },
+      teaching: {
+        title: 'Đào tạo',
+        description:
+          'Lập trình thực chiến, tư duy logic & Rubik, AI trong học và giảng — liên hệ lớp hoặc doanh nghiệp.',
+      },
+      rubikSplash: {
+        title: 'Cube Mastery — chọn lộ trình Rubik',
+        description:
+          'Rubik 3×3: Story Mode (tiểu học) hoặc Speed Mode (trung học); xem demo hiệu suất trước khi chọn.',
+      },
+      rubikCourse: {
+        title: 'Cube Mastery — khóa Rubik 3×3',
+        description:
+          'Chi tiết lộ trình và đăng ký Rubik 3×3 cho tiểu học hoặc trung học.',
+      },
+    },
     projects: {
       title: 'Dự án tiêu biểu',
       intro:
@@ -358,6 +392,40 @@ export const messages = {
       stackC3R1Years: '2+ yrs',
       stackC3R2Label: 'Python / integration & automation',
       stackC3R2Years: '1+ yrs',
+    },
+    seo: {
+      brandSuffix: ' | Tran Dang Khoa',
+      siteName: 'Tran Dang Khoa',
+      home: {
+        title: 'Full-stack engineer & tech educator',
+        description:
+          'Full-stack software engineer and tech educator: high-load systems, applied AI, hands-on programming and logic training.',
+      },
+      projects: {
+        title: 'Featured projects',
+        description:
+          'Large-scale LMS & exams, real-time trading terminals, education platforms—performance, load, and applied AI.',
+      },
+      experience: {
+        title: 'Experience',
+        description:
+          'Software engineering path: backend, microservices, realtime, cloud—production systems and tech lead work.',
+      },
+      teaching: {
+        title: 'Teaching',
+        description:
+          'Hands-on coding, logic & Rubik, AI in learning and workshops—classes and corporate training.',
+      },
+      rubikSplash: {
+        title: 'Cube Mastery — pick your Rubik path',
+        description:
+          'Rubik 3×3: Story Mode (elementary) or Speed Mode (high school); watch performance demos before you choose.',
+      },
+      rubikCourse: {
+        title: 'Cube Mastery — Rubik 3×3 course',
+        description:
+          'Course details and sign-up for elementary or high-school Rubik 3×3 tracks.',
+      },
     },
     projects: {
       title: 'Featured projects',

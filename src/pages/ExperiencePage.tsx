@@ -1,4 +1,5 @@
 import { useMemo } from 'react'
+import { Seo } from '../components/Seo'
 import { useI18n } from '../i18n/useI18n'
 
 export function ExperiencePage() {
@@ -32,6 +33,11 @@ export function ExperiencePage() {
 
   return (
     <div className="mx-auto max-w-max-width px-gutter py-xl">
+      <Seo
+        title={t('seo.experience.title')}
+        description={t('seo.experience.description')}
+        path="/experience"
+      />
       <div className="mb-xl">
         <h1 className="mb-xs font-display-lg text-display-lg text-on-surface">{t('experience.title')}</h1>
         <p className="max-w-2xl font-body-md text-on-surface-variant">{t('experience.intro')}</p>
