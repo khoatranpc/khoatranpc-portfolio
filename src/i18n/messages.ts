@@ -74,7 +74,10 @@ export const messages = {
       powered: 'Tích hợp AI',
       heroImgAlt: 'Không gian làm việc kỹ sư phần mềm',
       codeComment: '// Triết lý hệ thống',
-      aboutTitle: '🎯 Giới thiệu',
+      aboutEyebrow: 'Hồ sơ ngắn',
+      aboutTitle: 'Giới thiệu',
+      aboutLead:
+        'Kỹ sư fullstack và đào tạo công nghệ — thiết kế hệ thống bền vững, truyền đạt có cấu trúc.',
       quote:
         'Thay vì chỉ \'viết code\', tôi tập trung vào việc giải quyết bài toán kinh doanh.',
       legalName: 'Trần Đăng Khoa',
@@ -320,7 +323,10 @@ export const messages = {
       powered: 'AI-powered',
       heroImgAlt: 'Software engineer workspace',
       codeComment: '// System philosophy',
-      aboutTitle: '🎯 About',
+      aboutEyebrow: 'Short profile',
+      aboutTitle: 'About',
+      aboutLead:
+        'Full-stack engineer and tech educator — durable systems, structured teaching.',
       quote:
         'Instead of only “writing code”, I focus on solving real business problems.',
       legalName: 'Tran Dang Khoa',

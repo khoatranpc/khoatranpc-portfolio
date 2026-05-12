@@ -100,11 +100,23 @@ export function HomePage() {
       </section>
 
       <section className="border-y border-outline-variant bg-surface-container-lowest py-xl" id="about">
-        <div className="mx-auto grid max-w-max-width grid-cols-1 gap-lg px-gutter md:grid-cols-12">
-          <div className="md:col-span-4">
-            <h2 className="sticky top-24 font-headline-lg text-headline-lg text-on-surface">{t('home.aboutTitle')}</h2>
-          </div>
-          <div className="space-y-md md:col-span-8">
+        <div className="mx-auto grid max-w-max-width grid-cols-1 gap-xl px-gutter md:grid-cols-12 md:gap-lg">
+          <header className="flex flex-col md:col-span-4 md:border-r md:border-outline-variant/80 md:pr-lg">
+            <p className="font-label-caps text-label-caps tracking-[0.08em] text-secondary">
+              {t('home.aboutEyebrow')}
+            </p>
+            <h2 className="mt-3 font-display-lg text-display-lg leading-[1.08] tracking-tight text-on-surface md:mt-4">
+              {t('home.aboutTitle')}
+            </h2>
+            <div
+              className="mt-5 h-1 w-14 shrink-0 bg-secondary md:mt-6"
+              aria-hidden
+            />
+            <p className="mt-6 max-w-md text-sm leading-relaxed text-on-surface-variant md:max-w-[17rem]">
+              {t('home.aboutLead')}
+            </p>
+          </header>
+          <div className="space-y-md md:col-span-8 md:pl-2">
             <div className="relative border border-outline-variant bg-surface p-lg">
               <div className="absolute -left-4 -top-4 h-12 w-12 border-l-2 border-t-2 border-secondary" />
               <p className="mb-md font-headline-lg text-on-surface">&quot;{t('home.quote')}&quot;</p>
