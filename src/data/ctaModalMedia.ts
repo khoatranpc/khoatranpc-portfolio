@@ -1,0 +1,9 @@
+/** Ảnh minh họa CTA modal — trùng nguồn với Projects / Teaching. */
+export const CTA_MODAL_IMAGES = {
+  workLms:
+    'https://lh3.googleusercontent.com/aida-public/AB6AXuB9UIfIuxeZ7MpiMC4b9Ybt3SQYtg3iCPw1CSFF879zd_DxmrmF28ZklQ2UvYH8aInbvqJmmvXkAzpwF19e62xLUNAGN01jmyO4_8mVnSMc2-sIDrAY24KWd3D1UJRM2dDwrisl3foBMcbWXkgypPFukOEhjpWF4XbP0dbJJTxBqSjzVGQxy9vrrZkfc9JMTvmBMRcn7CrKpJZxt-PK7o9eBWX68RKWChFQAOXEC3ljH0M9XbKTK45DsADiavQjzTHONNpctFtEd2k',
+  workTrading:
+    'https://lh3.googleusercontent.com/aida-public/AB6AXuD2S4tTT9r4S_lHz7YV9TF-RVMfrz3mKwehyFV8WqwrEUPzbVWZ9y1rTOrwd-XCBblMyqse1MKH-8Jb2TSmHW8JQC0y7ls1JDDRZZA_ND10AruGLlWQPcFIyxVwRqlbAv3ewBkVQjOhnZzJbHoaeRmJZO0pvwLvFvNMMKvF0OZ9x4J3Rf648eZL6UQXmwRid2iosuwyOZcCPiG7Spp4Aihw4P1qD40GBlfmtm_SKgXljfNt5kNY2qd_ls4tftF7GrG-wyGD3zOQg_M',
+  trainingCode:
+    'https://lh3.googleusercontent.com/aida-public/AB6AXuDHjkgG3WM9E15WeEnDcFwzM9Bf5OAB9buA6uWE3TODhdqxKpjSuDkzHQS0sgoYgkCTmFaDeGO-CaoibedvvpbV_aHE6Fggmdb6-fXhsCR2ND3xdK-Mv18VHjm_RGMnYw8lTwqUZBVmmc98hNlkOpzY_GIVIXlUIkRLfyEBSwwg5eQ9HBHbQ78qMNwen_GmN5SiURoPqtSExO7yXXtX3VB_HQ41N4TNKiyIKxhAOly7vRM32M9CF9saPGBCYtOcMMV_NXqPZ4mpRDQ',
+} as const

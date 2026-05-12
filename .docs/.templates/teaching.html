@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Trần Đăng Khoa | Đào tạo &amp; Liên hệ</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Geist:wght@600;700&amp;family=JetBrains+Mono:wght@400&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ffb4ab",
+                        "on-primary": "#283044",
+                        "on-surface": "#e0e3e5",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "surface-container": "#1d2022",
+                        "secondary-fixed": "#6ffbbe",
+                        "surface-dim": "#101415",
+                        "surface-container-low": "#191c1e",
+                        "inverse-primary": "#565e74",
+                        "tertiary": "#b7c8e1",
+                        "primary-container": "#0f172a",
+                        "inverse-on-surface": "#2d3133",
+                        "outline-variant": "#45464d",
+                        "secondary": "#4edea3",
+                        "inverse-surface": "#e0e3e5",
+                        "on-tertiary": "#213145",
+                        "background": "#101415",
+                        "on-error": "#690005",
+                        "surface": "#101415",
+                        "surface-tint": "#bec6e0",
+                        "on-primary-fixed": "#131b2e",
+                        "tertiary-fixed": "#d3e4fe",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "tertiary-container": "#06182b",
+                        "surface-container-lowest": "#0b0f10",
+                        "surface-container-highest": "#323537",
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "on-secondary": "#003824",
+                        "primary": "#bec6e0",
+                        "primary-fixed": "#dae2fd",
+                        "on-surface-variant": "#c6c6cd",
+                        "on-secondary-container": "#00311f",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#798098",
+                        "on-error-container": "#ffdad6",
+                        "on-background": "#e0e3e5",
+                        "on-tertiary-container": "#728299",
+                        "surface-container-high": "#272a2c",
+                        "surface-bright": "#363a3b",
+                        "secondary-fixed-dim": "#4edea3",
+                        "outline": "#909097",
+                        "secondary-container": "#00a572",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "surface-variant": "#323537",
+                        "on-secondary-fixed-variant": "#005236",
+                        "on-secondary-fixed": "#002113"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "lg": "48px",
+                        "max-width": "1200px",
+                        "md": "24px",
+                        "base": "4px",
+                        "sm": "16px",
+                        "xl": "80px",
+                        "xs": "8px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Geist"],
+                        "code-sm": ["JetBrains Mono"],
+                        "label-caps": ["Inter"],
+                        "display-lg": ["Geist"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Geist"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "code-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #101415;
+            color: #e0e3e5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+
+        .glass-card {
+            background: rgba(29, 32, 34, 0.6);
+            backdrop-filter: blur(8px);
+            border: 1px solid #45464d;
+        }
+    </style>
+</head>
+
+<body class="font-body-md">
+    <!-- TopAppBar -->
+    <header
+        class="bg-surface dark:bg-surface border-b border-outline-variant dark:border-outline-variant docked full-width top-0 z-50 sticky">
+        <nav class="flex justify-between items-center h-16 w-full px-gutter max-w-max-width mx-auto">
+            <div
+                class="font-headline-lg text-headline-lg font-bold tracking-tighter text-on-surface dark:text-on-surface">
+                TRẦN ĐĂNG KHOA
+            </div>
+            <div class="hidden md:flex space-x-gutter items-center">
+                <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary transition-colors font-body-md text-body-md"
+                    href="#">Projects</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary transition-colors font-body-md text-body-md"
+                    href="#">Experience</a>
+                <a class="text-secondary dark:text-secondary font-bold border-b-2 border-secondary pb-1 font-body-md text-body-md"
+                    href="#">Teaching</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary transition-colors font-body-md text-body-md"
+                    href="#">About</a>
+                <button
+                    class="bg-secondary text-on-primary px-sm py-xs font-label-caps text-label-caps rounded-lg hover:bg-secondary-container transition-all Active:scale-95 duration-150 ease-in-out">Resume</button>
+            </div>
+            <button class="md:hidden p-2 text-on-surface">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </nav>
+    </header>
+    <main class="max-w-max-width mx-auto px-gutter py-xl">
+        <!-- Teaching Section -->
+        <section class="mb-xl">
+            <div class="flex flex-col mb-lg">
+                <span class="text-secondary font-label-caps text-label-caps mb-xs">KNOWLEDGE TRANSFER</span>
+                <h2 class="font-display-lg text-display-lg text-on-surface mb-md">Đào tạo &amp; Huấn luyện</h2>
+                <p class="max-w-2xl text-on-surface-variant text-body-md">
+                    Biến kiến thức kỹ thuật phức tạp thành những bài học thực tế, dễ hiểu và có tính ứng dụng cao. Tôi
+                    tập trung vào tư duy cốt lõi để học viên có thể tự phát triển bền vững.
+                </p>
+            </div>
+            <!-- Bento Grid for Teaching Modules -->
+            <div class="bento-grid">
+                <!-- Module 1: Programming -->
+                <div
+                    class="col-span-12 md:col-span-8 glass-card rounded-xl p-md flex flex-col md:flex-row gap-md overflow-hidden group">
+                    <div
+                        class="w-full md:w-1/2 aspect-video bg-surface-container rounded-lg overflow-hidden border border-outline-variant relative">
+                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            data-alt="A high-contrast macro shot of complex JavaScript code on a dark professional monitor. The ambient lighting is deep blue and emerald green, reflecting the brand colors. The focus is sharp on the syntax highlighting, emphasizing technical precision and expert coding craftsmanship in a minimalist development environment."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHjkgG3WM9E15WeEnDcFwzM9Bf5OAB9buA6uWE3TODhdqxKpjSuDkzHQS0sgoYgkCTmFaDeGO-CaoibedvvpbV_aHE6Fggmdb6-fXhsCR2ND3xdK-Mv18VHjm_RGMnYw8lTwqUZBVmmc98hNlkOpzY_GIVIXlUIkRLfyEBSwwg5eQ9HBHbQ78qMNwen_GmN5SiURoPqtSExO7yXXtX3VB_HQ41N4TNKiyIKxhAOly7vRM32M9CF9saPGBCYtOcMMV_NXqPZ4mpRDQ" />
+                    </div>
+                    <div class="w-full md:w-1/2 flex flex-col justify-center">
+                        <span class="material-symbols-outlined text-secondary mb-xs"
+                            style="font-variation-settings: 'FILL' 1;">code</span>
+                        <h3 class="font-headline-lg text-headline-lg text-on-surface mb-xs">Lập trình Thực chiến</h3>
+                        <p class="text-on-surface-variant text-body-md mb-md">Hơn 3 năm kinh nghiệm giảng dạy tại MindX
+                            Technology School, giúp hàng trăm học viên làm chủ Node.js, Python và React.</p>
+                        <div class="flex flex-wrap gap-xs">
+                            <span
+                                class="bg-surface-container-high px-xs py-[2px] rounded text-code-sm font-code-sm text-secondary">Web
+                                Fullstack</span>
+                            <span
+                                class="bg-surface-container-high px-xs py-[2px] rounded text-code-sm font-code-sm text-secondary">Hệ
+                                thống chịu tải</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Module 2: Logic/Rubik -->
+                <div class="col-span-12 md:col-span-4 glass-card rounded-xl p-md flex flex-col justify-between group">
+                    <div class="mb-md">
+                        <span class="material-symbols-outlined text-secondary mb-xs"
+                            style="font-variation-settings: 'FILL' 1;">extension</span>
+                        <h3 class="font-headline-lg text-headline-lg text-on-surface mb-xs">Tư duy Logic</h3>
+                        <p class="text-on-surface-variant text-body-md">Huấn luyện giải Rubik tốc độ cao và phân tích
+                            chiến thuật, rèn luyện khả năng giải quyết vấn đề dưới áp lực thời gian.</p>
+                    </div>
+                    <div
+                        class="h-32 bg-surface-container-lowest rounded-lg border border-outline-variant flex items-center justify-center">
+                        <div class="grid grid-cols-3 gap-1">
+                            <div class="w-4 h-4 bg-secondary"></div>
+                            <div class="w-4 h-4 bg-primary"></div>
+                            <div class="w-4 h-4 bg-tertiary"></div>
+                            <div class="w-4 h-4 bg-primary"></div>
+                            <div class="w-4 h-4 bg-secondary"></div>
+                            <div class="w-4 h-4 bg-secondary"></div>
+                            <div class="w-4 h-4 bg-tertiary"></div>
+                            <div class="w-4 h-4 bg-primary"></div>
+                            <div class="w-4 h-4 bg-secondary"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Module 3: AI Application -->
+                <div class="col-span-12 md:col-span-4 glass-card rounded-xl p-md flex flex-col justify-between group">
+                    <div class="mb-md">
+                        <span class="material-symbols-outlined text-secondary mb-xs"
+                            style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                        <h3 class="font-headline-lg text-headline-lg text-on-surface mb-xs">Ứng dụng AI</h3>
+                        <p class="text-on-surface-variant text-body-md">Hướng dẫn cá nhân và doanh nghiệp tối ưu quy
+                            trình làm việc với ChatGPT, Copilot và các công cụ AI hiện đại.</p>
+                    </div>
+                    <div class="bg-primary-container p-sm rounded-lg border border-outline-variant">
+                        <div class="flex items-center gap-xs mb-xs">
+                            <div class="w-2 h-2 rounded-full bg-secondary animate-pulse"></div>
+                            <span class="text-code-sm font-code-sm text-on-primary-container">AI Prompt Engineer</span>
+                        </div>
+                        <div class="h-1 bg-surface-variant rounded-full w-full">
+                            <div class="h-full bg-secondary rounded-full" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Module 4: Educational Stats -->
+                <div class="col-span-12 md:col-span-8 glass-card rounded-xl p-md border-l-4 border-l-secondary">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-md text-center h-full items-center">
+                        <div>
+                            <div class="font-display-lg text-display-lg text-secondary">3+</div>
+                            <div class="text-label-caps font-label-caps text-on-surface-variant uppercase">Năm kinh
+                                nghiệm</div>
+                        </div>
+                        <div>
+                            <div class="font-display-lg text-display-lg text-secondary">500+</div>
+                            <div class="text-label-caps font-label-caps text-on-surface-variant uppercase">Học viên
+                            </div>
+                        </div>
+                        <div>
+                            <div class="font-display-lg text-display-lg text-secondary">10+</div>
+                            <div class="text-label-caps font-label-caps text-on-surface-variant uppercase">Khóa học thực
+                                tế</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section class="py-xl" id="contact">
+            <div class="flex flex-col mb-lg items-center text-center">
+                <span class="text-secondary font-label-caps text-label-caps mb-xs">GET IN TOUCH</span>
+                <h2 class="font-display-lg text-display-lg text-on-surface">Sẵn sàng hợp tác</h2>
+                <div class="w-24 h-1 bg-secondary mt-md"></div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-xl items-start">
+                <!-- Contact Form -->
+                <div class="lg:col-span-7">
+                    <form class="space-y-md">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+                            <div>
+                                <label class="block text-label-caps font-label-caps text-on-surface-variant mb-xs">HỌ VÀ
+                                    TÊN</label>
+                                <input
+                                    class="w-full bg-surface-container border border-outline-variant rounded-lg px-md py-sm text-on-surface focus:ring-1 focus:ring-secondary focus:border-secondary outline-none transition-all"
+                                    placeholder="Nguyễn Văn A" type="text" />
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-label-caps font-label-caps text-on-surface-variant mb-xs">EMAIL</label>
+                                <input
+                                    class="w-full bg-surface-container border border-outline-variant rounded-lg px-md py-sm text-on-surface focus:ring-1 focus:ring-secondary focus:border-secondary outline-none transition-all"
+                                    placeholder="example@gmail.com" type="email" />
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-label-caps font-label-caps text-on-surface-variant mb-xs">CHỦ
+                                ĐỀ</label>
+                            <input
+                                class="w-full bg-surface-container border border-outline-variant rounded-lg px-md py-sm text-on-surface focus:ring-1 focus:ring-secondary focus:border-secondary outline-none transition-all"
+                                placeholder="Dự án phần mềm / Khóa học" type="text" />
+                        </div>
+                        <div>
+                            <label class="block text-label-caps font-label-caps text-on-surface-variant mb-xs">LỜI
+                                NHẮN</label>
+                            <textarea
+                                class="w-full bg-surface-container border border-outline-variant rounded-lg px-md py-sm text-on-surface focus:ring-1 focus:ring-secondary focus:border-secondary outline-none transition-all"
+                                placeholder="Mô tả nhu cầu của bạn..." rows="6"></textarea>
+                        </div>
+                        <button
+                            class="w-full md:w-max bg-secondary text-on-primary px-xl py-md font-label-caps text-label-caps rounded-lg hover:bg-secondary-container transition-all Active:scale-95 flex items-center justify-center gap-xs"
+                            type="submit">
+                            GỬI YÊU CẦU
+                            <span class="material-symbols-outlined text-md">send</span>
+                        </button>
+                    </form>
+                </div>
+                <!-- Contact Details -->
+                <div class="lg:col-span-5 space-y-lg">
+                    <div class="glass-card p-lg rounded-xl">
+                        <h4 class="font-headline-lg text-headline-lg text-on-surface mb-md">Trực tiếp</h4>
+                        <div class="space-y-md">
+                            <div class="flex items-start gap-md">
+                                <div
+                                    class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center text-secondary">
+                                    <span class="material-symbols-outlined">call</span>
+                                </div>
+                                <div>
+                                    <p class="text-label-caps font-label-caps text-on-surface-variant">SỐ ĐIỆN THOẠI /
+                                        ZALO</p>
+                                    <p class="text-body-md font-bold text-on-surface">+84 353 923 603</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-md">
+                                <div
+                                    class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center text-secondary">
+                                    <span class="material-symbols-outlined">mail</span>
+                                </div>
+                                <div>
+                                    <p class="text-label-caps font-label-caps text-on-surface-variant">EMAIL</p>
+                                    <p class="text-body-md font-bold text-on-surface">khoatranpc603@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-md">
+                                <div
+                                    class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center text-secondary">
+                                    <span class="material-symbols-outlined">terminal</span>
+                                </div>
+                                <div>
+                                    <p class="text-label-caps font-label-caps text-on-surface-variant">GITHUB</p>
+                                    <p class="text-body-md font-bold text-on-surface">github.com/khoatranpc</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-md">
+                                <div
+                                    class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center text-secondary">
+                                    <span class="material-symbols-outlined">location_on</span>
+                                </div>
+                                <div>
+                                    <p class="text-label-caps font-label-caps text-on-surface-variant">ĐỊA CHỈ</p>
+                                    <p class="text-body-md font-bold text-on-surface">Hà Nội, Việt Nam</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative rounded-xl overflow-hidden h-48 border border-outline-variant">
+                        <img class="w-full h-full object-cover grayscale opacity-50"
+                            data-alt="A stylized, minimalist aerial view of a modern city grid at night, with street lights forming a glowing network of paths. The image is filtered through a dark slate and deep blue color palette, echoing a technical blueprint or digital map. The atmosphere is professional, quiet, and sophisticated, reflecting a focused work environment."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAApz57j8eTxXyg6uT8MekARthIMD5YWAJsxBvVC3q8OtJXzs4ICHqbGj3vf1htKqs7G3t3euT0epMdOTLBYCFXKb1EZpjZQugWA9RMChM3zoDSTZiuxIYQ6LMIR89A1RGNfjdEqwKRQQGHhLutJxg8Wg8_DytUrfp233QxXIvdghdv44rLFjA56EodIkeKX1Ltn63MSdAfMgD6ehiEm2LwTVxyvJoNTPURokOzUW5QAhItWO_AWK-hLp2c18i7JgxiNy0gErx-iEg" />
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div
+                                class="bg-secondary text-on-primary px-md py-xs rounded-full font-label-caps text-label-caps shadow-lg">
+                                HÀ NỘI, VN</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant dark:border-outline-variant full-width bottom-0">
+        <div class="flex flex-col md:flex-row justify-between items-center py-lg px-gutter max-w-max-width mx-auto">
+            <div class="text-on-surface-variant dark:text-on-surface-variant font-body-md text-body-md mb-md md:mb-0">
+                © 2024 Trần Đăng Khoa. Tối giản - Dễ hiểu - Hiệu quả.
+            </div>
+            <div class="flex space-x-md">
+                <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary transition-colors font-code-sm text-code-sm"
+                    href="#">Email</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary transition-colors font-code-sm text-code-sm"
+                    href="#">Zalo</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary transition-colors font-code-sm text-code-sm"
+                    href="#">GitHub</a>
+                <span class="text-on-surface-variant dark:text-on-surface-variant font-code-sm text-code-sm">Ho Chi Minh
+                    City, VN</span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+{
+  "personal": {
+    "name": "Trần Đăng Khoa",
+    "role": "Kỹ sư Phần mềm | Chuyên gia Đào tạo",
+    "description": "Với hơn 3 năm kinh nghiệm, tôi chuyên tư vấn, thiết kế và xây dựng các website, phần mềm quản lý có khả năng phục vụ hàng chục ngàn người sử dụng cùng lúc. Thay vì chỉ 'viết code', tôi tập trung vào việc giải quyết bài toán kinh doanh của khách hàng, ứng dụng Trí tuệ nhân tạo (AI) để tiết kiệm chi phí và tối ưu trải nghiệm. Đồng thời, tôi đam mê việc biến những kiến thức kỹ thuật phức tạp thành các bài học thực tế, dễ hiểu cho mọi đối tượng.",
+    "location": "Hà Nội, Việt Nam",
+    "phone": "+84 353 923 603",
+    "email": "khoatranpc603@gmail.com",
+    "github": "https://github.com/khoatranpc",
+    "linkedin": ""
+  },
+  "cta": {
+    "title": "Sẵn sàng hợp tác",
+    "description": "Tôi luôn cởi mở với những cơ hội mới, bao gồm: cùng đồng hành xây dựng phần mềm/website chất lượng cao, tư vấn định hướng kỹ thuật cho doanh nghiệp, hoặc đào tạo nhân sự/học viên. Nếu bạn có một bài toán cần giải quyết, đừng ngần ngại liên hệ với tôi!",
+    "buttons": [
+      {
+        "label": "Bàn về dự án/Công việc",
+        "action": "mailto:khoatranpc603@gmail.com?subject=Discuss%20Work/Project%20Opportunity"
+      },
+      {
+        "label": "Thảo luận về Đào tạo",
+        "action": "mailto:khoatranpc603@gmail.com?subject=Discuss%20Training/Mentoring%20Collaboration"
+      }
+    ]
+  },
+  "experience": [
+    {
+      "role": "Kỹ sư Phần mềm",
+      "company": "FPT IS",
+      "period": "Hiện tại",
+      "responsibilities": [
+        "Tham gia phát triển nền tảng e-learning và thi trực tuyến, đảm bảo hệ thống vận hành trơn tru cho hơn 10.000 người dùng mỗi ngày."
+      ]
+    },
+    {
+      "role": "Kỹ sư Phần mềm & Chuyên gia Đào tạo",
+      "company": "MindX Technology School",
+      "period": "06/2022 - Hiện tại",
+      "responsibilities": [
+        "Trực tiếp xây dựng các sản phẩm công nghệ giáo dục và ứng dụng AI để tối ưu hóa quy trình quản lý học viên.",
+        "Hơn 3 năm kinh nghiệm giảng dạy lập trình, giúp hàng trăm học viên làm chủ công nghệ mới."
+      ]
+    },
+    {
+      "role": "Lập trình viên Frontend",
+      "company": "FTL Vietnam",
+      "period": "05/2022 - 07/2023",
+      "responsibilities": [
+        "Làm ra các phần mềm tài chính, chứng khoán với yêu cầu cực kỳ khắt khe về tốc độ cập nhật dữ liệu và trải nghiệm người dùng."
+      ]
+    },
+    {
+      "role": "Chuyên gia Tư vấn & Phát triển Phần mềm (Freelance)",
+      "company": "Tự do",
+      "period": "Hiện tại",
+      "responsibilities": [
+        "Làm việc trực tiếp với các doanh nghiệp để biến ý tưởng thành phần mềm hoàn chỉnh, tư vấn giải pháp tối ưu chi phí và dễ dàng mở rộng."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "fpt-is-learning",
+      "title": "Hệ thống Học tập & Thi cử trực tuyến",
+      "company": "FPT IS",
+      "description": "Nền tảng học tập và thi cử trực tuyến quy mô lớn.",
+      "techStack": [],
+      "highlights": [
+        "Đảm bảo hệ thống chạy mượt mà, không gián đoạn hay sập mạng ngay cả khi có hơn 10.000 học sinh, sinh viên truy cập cùng lúc."
+      ],
+      "images": ["assets/projects/fpt-learning/dashboard.png"]
+    },
+    {
+      "id": "mas-mirae-asset",
+      "title": "Nền tảng Giao dịch Chứng khoán",
+      "company": "FTL Vietnam",
+      "description": "Hệ thống theo dõi và giao dịch chứng khoán trên web.",
+      "techStack": ["ReactJS", "WebSockets"],
+      "highlights": [
+        "Tối ưu hóa tốc độ hiển thị, đảm bảo dữ liệu được cập nhật ngay lập tức (real-time) không có độ trễ, mang lại lợi thế quyết định nhanh chóng cho nhà đầu tư."
+      ],
+      "images": ["assets/projects/mas-trade/chart.png"]
+    },
+    {
+      "id": "mindx-ecosystem",
+      "title": "Hệ sinh thái Quản lý Giáo dục có tích hợp AI",
+      "company": "MindX Technology School",
+      "description": "Chuỗi phần mềm quản lý giảng dạy và công cụ hỗ trợ học tập.",
+      "techStack": ["Next.js", "Node.js", "AI (OpenAI)"],
+      "highlights": [
+        "Ứng dụng AI thông minh để tự động phân tích hàng ngàn đoạn tin nhắn trao đổi, giúp thấu hiểu nhu cầu của học viên nhanh chóng.",
+        "Xây dựng phần mềm học từ vựng có khả năng tự tạo ra bài tập và câu hỏi phù hợp với trình độ của từng người học."
+      ],
+      "images": [
+        "assets/projects/mindx/dashboard.png",
+        "assets/projects/learn-loop/quiz.png"
+      ]
+    },
+    {
+      "id": "rent-shop",
+      "title": "Hệ thống Quản lý Cửa hàng Cho Thuê",
+      "company": "Freelance",
+      "description": "Phần mềm quản lý trọn gói dành cho các mô hình kinh doanh cho thuê đồ.",
+      "techStack": ["NestJS", "Next.js"],
+      "highlights": [
+        "Xây dựng hệ thống bài bản giúp chủ cửa hàng dễ dàng quản lý dòng tiền, sản phẩm, tự động hóa quy trình tính phí và giảm thiểu sai sót."
+      ],
+      "images": ["assets/projects/rent-shop/dashboard.png"]
+    },
+    {
+      "id": "japan-job",
+      "title": "Nền tảng Việc làm Nhật Bản",
+      "company": "Freelance",
+      "description": "Website kết nối nhà tuyển dụng Nhật Bản và người lao động.",
+      "techStack": ["Next.js", "SEO Optimization"],
+      "highlights": [
+        "Thiết kế giao diện hiện đại, thân thiện, và tối ưu công cụ tìm kiếm (Chuẩn SEO) giúp trang web dễ dàng xuất hiện ở trang đầu Google."
+      ],
+      "images": ["assets/projects/japan-job/home.png"]
+    }
+  ],
+  "education": {
+    "programming": [
+      {
+        "title": "Đào tạo Lập trình Thực chiến",
+        "description": "Có hơn 3 năm kinh nghiệm giảng dạy cho mọi độ tuổi. Thiết kế toàn bộ giáo trình chuyên sâu (VD: Dữ liệu - Data Engineering), biến kiến thức kỹ thuật thành bài thực hành thú vị."
+      }
+    ],
+    "skills": [
+      {
+        "title": "Đào tạo Tư duy qua Rubik & Trò chơi",
+        "description": "Huấn luyện giải Rubik tốc độ cao và phân tích chiến thuật, rèn luyện tư duy không gian, logic và khả năng ra quyết định cực nhanh."
+      },
+      {
+        "title": "Ứng dụng Trí tuệ Nhân tạo (AI)",
+        "description": "Hướng dẫn mọi người dùng AI (ChatGPT, Copilot) như một trợ lý, giúp họ làm việc hiệu quả và nhanh hơn gấp nhiều lần."
+      }
+    ]
+  },
+  "technical_skills_summary": {
+    "note": "Dành cho đối tác/nhà tuyển dụng kỹ thuật",
+    "items": [
+      "Ngôn ngữ: Node.js, Python, Java, React, Next.js, Nuxt.js, TypeScript",
+      "Kiến trúc: Clean Architecture, Microservices, WebSockets, gRPC",
+      "Cơ sở dữ liệu: MongoDB, PostgreSQL, MySQL",
+      "DevOps: Linux, AWS, Docker, CI/CD"
+    ]
+  }
+}

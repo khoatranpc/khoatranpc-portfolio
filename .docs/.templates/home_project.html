@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Dự án tiêu biểu | TRẦN ĐĂNG KHOA</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Geist:wght@600;700&amp;family=JetBrains+Mono:wght@400&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ffb4ab",
+                        "on-primary": "#283044",
+                        "on-surface": "#e0e3e5",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "surface-container": "#1d2022",
+                        "secondary-fixed": "#6ffbbe",
+                        "surface-dim": "#101415",
+                        "surface-container-low": "#191c1e",
+                        "inverse-primary": "#565e74",
+                        "tertiary": "#b7c8e1",
+                        "primary-container": "#0f172a",
+                        "inverse-on-surface": "#2d3133",
+                        "outline-variant": "#45464d",
+                        "secondary": "#4edea3",
+                        "inverse-surface": "#e0e3e5",
+                        "on-tertiary": "#213145",
+                        "background": "#101415",
+                        "on-error": "#690005",
+                        "surface": "#101415",
+                        "surface-tint": "#bec6e0",
+                        "on-primary-fixed": "#131b2e",
+                        "tertiary-fixed": "#d3e4fe",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "tertiary-container": "#06182b",
+                        "surface-container-lowest": "#0b0f10",
+                        "surface-container-highest": "#323537",
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "on-secondary": "#003824",
+                        "primary": "#bec6e0",
+                        "primary-fixed": "#dae2fd",
+                        "on-surface-variant": "#c6c6cd",
+                        "on-secondary-container": "#00311f",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#798098",
+                        "on-error-container": "#ffdad6",
+                        "on-background": "#e0e3e5",
+                        "on-tertiary-container": "#728299",
+                        "surface-container-high": "#272a2c",
+                        "surface-bright": "#363a3b",
+                        "secondary-fixed-dim": "#4edea3",
+                        "outline": "#909097",
+                        "secondary-container": "#00a572",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "surface-variant": "#323537",
+                        "on-secondary-fixed-variant": "#005236",
+                        "on-secondary-fixed": "#002113"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "lg": "48px",
+                        "max-width": "1200px",
+                        "md": "24px",
+                        "base": "4px",
+                        "sm": "16px",
+                        "xl": "80px",
+                        "xs": "8px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Geist"],
+                        "code-sm": ["JetBrains Mono"],
+                        "label-caps": ["Inter"],
+                        "display-lg": ["Geist"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Geist"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "code-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .project-card:hover .project-image {
+            transform: scale(1.05);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0b0f10;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #45464d;
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface selection:bg-secondary selection:text-on-secondary custom-scrollbar">
+    <!-- TopNavBar -->
+    <header class="bg-surface border-b border-outline-variant fixed top-0 left-0 right-0 z-50">
+        <nav class="flex justify-between items-center h-16 w-full px-gutter max-w-max-width mx-auto">
+            <div class="font-headline-lg text-headline-lg font-bold tracking-tighter text-on-surface">TRẦN ĐĂNG KHOA
+            </div>
+            <div class="hidden md:flex items-center gap-md">
+                <a class="font-body-md text-secondary font-bold border-b-2 border-secondary pb-1" href="#">Projects</a>
+                <a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors"
+                    href="#">Experience</a>
+                <a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors"
+                    href="#">Teaching</a>
+                <a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors"
+                    href="#">About</a>
+                <button
+                    class="ml-xs bg-secondary text-on-secondary px-sm py-xs font-label-caps rounded active:scale-95 duration-150 ease-in-out transition-all">Resume</button>
+            </div>
+            <button class="md:hidden p-xs">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </nav>
+    </header>
+    <main class="pt-xl pb-xl">
+        <!-- Hero Section -->
+        <section class="max-w-max-width mx-auto px-gutter py-xl">
+            <div class="border-l-4 border-secondary pl-md mb-lg">
+                <h1 class="font-display-lg text-display-lg mb-xs">Dự án tiêu biểu</h1>
+                <p class="font-body-md text-on-surface-variant max-w-2xl">
+                    Tuyển tập các sản phẩm công nghệ tôi đã trực tiếp thiết kế và xây dựng, tập trung vào tính hiệu quả,
+                    khả năng chịu tải cao và ứng dụng trí tuệ nhân tạo.
+                </p>
+            </div>
+            <!-- Portfolio Bento Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-md">
+                <!-- Project 1: LMS FPT (Large) -->
+                <div
+                    class="md:col-span-8 group relative overflow-hidden bg-surface-container border border-outline-variant rounded-lg transition-all duration-300 hover:border-secondary/50">
+                    <div class="aspect-video w-full overflow-hidden">
+                        <img alt="FPT LMS Platform"
+                            class="project-image w-full h-full object-cover transition-transform duration-500"
+                            data-alt="A high-tech digital learning management system interface displayed on a sleek laptop screen. The background is a minimalist, modern office with soft blue and emerald lighting. The UI is professional, featuring clean data visualizations and complex course structures, reflecting a robust software engineering aesthetic with high technical precision."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9UIfIuxeZ7MpiMC4b9Ybt3SQYtg3iCPw1CSFF879zd_DxmrmF28ZklQ2UvYH8aInbvqJmmvXkAzpwF19e62xLUNAGN01jmyO4_8mVnSMc2-sIDrAY24KWd3D1UJRM2dDwrisl3foBMcbWXkgypPFukOEhjpWF4XbP0dbJJTxBqSjzVGQxy9vrrZkfc9JMTvmBMRcn7CrKpJZxt-PK7o9eBWX68RKWChFQAOXEC3ljH0M9XbKTK45DsADiavQjzTHONNpctFtEd2k" />
+                    </div>
+                    <div class="p-md">
+                        <div class="flex flex-wrap gap-xs mb-xs">
+                            <span
+                                class="font-code-sm text-code-sm bg-primary-container text-on-primary-container px-xs py-0.5 rounded">Node.js</span>
+                            <span
+                                class="font-code-sm text-code-sm bg-primary-container text-on-primary-container px-xs py-0.5 rounded">High
+                                Load</span>
+                            <span
+                                class="font-code-sm text-code-sm bg-primary-container text-on-primary-container px-xs py-0.5 rounded">PostgreSQL</span>
+                        </div>
+                        <h3 class="font-headline-lg text-headline-lg mb-xs">Hệ thống Học tập &amp; Thi cử trực tuyến
+                            (FPT IS)</h3>
+                        <p class="font-body-md text-on-surface-variant mb-md">Nền tảng học tập và thi cử trực tuyến quy
+                            mô lớn, phục vụ hàng chục ngàn người dùng đồng thời.</p>
+                        <div class="bg-surface-container-low p-sm rounded border-l-2 border-secondary">
+                            <span class="font-label-caps text-secondary block mb-1">GIÁ TRỊ MANG LẠI</span>
+                            <p class="font-body-md italic text-on-surface">Đảm bảo hệ thống vận hành mượt mà, không gián
+                                đoạn ngay cả khi có hơn 10.000 học viên truy cập cùng một thời điểm.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2: Trading Platform -->
+                <div
+                    class="md:col-span-4 group relative overflow-hidden bg-surface-container border border-outline-variant rounded-lg transition-all duration-300 hover:border-secondary/50">
+                    <div class="aspect-square w-full overflow-hidden">
+                        <img alt="Trading Platform"
+                            class="project-image w-full h-full object-cover transition-transform duration-500"
+                            data-alt="A sophisticated financial trading terminal with real-time candlestick charts and rapid-fire data streams. The overall mood is intense and professional, set in a dark mode environment with vibrant emerald green and soft slate blue accents. The lighting is low-key, focusing on the high-contrast data display and professional trading tools."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2S4tTT9r4S_lHz7YV9TF-RVMfrz3mKwehyFV8WqwrEUPzbVWZ9y1rTOrwd-XCBblMyqse1MKH-8Jb2TSmHW8JQC0y7ls1JDDRZZA_ND10AruGLlWQPcFIyxVwRqlbAv3ewBkVQjOhnZzJbHoaeRmJZO0pvwLvFvNMMKvF0OZ9x4J3Rf648eZL6UQXmwRid2iosuwyOZcCPiG7Spp4Aihw4P1qD40GBlfmtm_SKgXljfNt5kNY2qd_ls4tftF7GrG-wyGD3zOQg_M" />
+                    </div>
+                    <div class="p-md">
+                        <div class="flex flex-wrap gap-xs mb-xs">
+                            <span
+                                class="font-code-sm text-code-sm bg-primary-container text-on-primary-container px-xs py-0.5 rounded">Real-time</span>
+                            <span
+                                class="font-code-sm text-code-sm bg-primary-container text-on-primary-container px-xs py-0.5 rounded">React</span>
+                            <span
+                                class="font-code-sm text-code-sm bg-primary-container text-on-primary-container px-xs py-0.5 rounded">WebSocket</span>
+                        </div>
+                        <h3 class="font-headline-lg text-headline-lg-mobile mb-xs">Nền tảng Giao dịch Chứng khoán</h3>
+                        <p class="font-body-md text-on-surface-variant mb-md text-sm">Hệ thống theo dõi và giao dịch
+                            chứng khoán (Mas Mirae Asset &amp; JBSV).</p>
+                        <div class="bg-surface-container-low p-sm rounded border-l-2 border-secondary">
+                            <span class="font-label-caps text-secondary block mb-1">GIÁ TRỊ MANG LẠI</span>
+                            <p class="font-body-md italic text-on-surface text-sm">Tối ưu hóa tốc độ hiển thị biểu đồ,
+                                cập nhật dữ liệu real-time không độ trễ cho nhà đầu tư.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3: AI EdTech -->
+                <div
+                    class="md:col-span-5 group relative overflow-hidden bg-surface-container border border-outline-variant rounded-lg transition-all duration-300 hover:border-secondary/50">
+                    <div class="aspect-video w-full overflow-hidden">
+                        <img alt="AI EdTech"
+                            class="project-image w-full h-full object-cover transition-transform duration-500"
+                            data-alt="A futuristic AI-powered education interface featuring neural network visualizations and personalized learning paths. The scene is illuminated by glowing emerald particles against a deep navy background. The visual style is highly technical and minimalist, suggesting artificial intelligence integration into educational software with a focus on structural order and clarity."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZudHJ30wCmF7li3zNGInazw02ixVr5HXH-5fmmJP316suqbfhdDA6mv8PybOMtipx_oqBH646AHgCBaDUzUju1gUDR75vdXWuZhQeP1DXgG_EIR9H5tWZtSnHjSLJ9Wk82pRguKykpQyDYLQrSy1DCLs4CeJLQ3fDmdnBrUIAla-hgTxI24SPTrQHF_rppedrPpO3bQiEZOXeyOzO4_nFqytmIITzw5OAvxEPPbtJ21fyxmm_8vCXjTiZA0aX-QIN2vsH2T3Uog0" />
+                    </div>
+                    <div class="p-md">
+                        <div class="flex flex-wrap gap-xs mb-xs">
+                            <span
+                                class="font-code-sm text-code-sm bg-primary-container text-on-primary-container px-xs py-0.5 rounded">AI/ML</span>
+                            <span
+                                class="font-code-sm text-code-sm bg-primary-container text-on-primary-container px-xs py-0.5 rounded">Next.js</span>
+                            <span
+                                class="font-code-sm text-code-sm bg-primary-container text-on-primary-container px-xs py-0.5 rounded">Python</span>
+                        </div>
+                        <h3 class="font-headline-lg text-headline-lg-mobile mb-xs">Hệ sinh thái Giáo dục AI (MindX Tech)
+                        </h3>
+                        <div class="bg-surface-container-low p-sm rounded border-l-2 border-secondary">
+                            <span class="font-label-caps text-secondary block mb-1">GIÁ TRỊ MANG LẠI</span>
+                            <p class="font-body-md italic text-on-surface text-sm">Ứng dụng AI tự động phân tích tin
+                                nhắn học viên và tạo bài tập cá nhân hóa theo trình độ.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 4: Rent-Shop -->
+                <div
+                    class="md:col-span-3 group relative overflow-hidden bg-surface-container border border-outline-variant rounded-lg transition-all duration-300 hover:border-secondary/50">
+                    <div class="p-md h-full flex flex-col">
+                        <div class="flex flex-wrap gap-xs mb-md">
+                            <span
+                                class="font-code-sm text-code-sm bg-primary-container text-on-primary-container px-xs py-0.5 rounded">Management</span>
+                            <span
+                                class="font-code-sm text-code-sm bg-primary-container text-on-primary-container px-xs py-0.5 rounded">ERP</span>
+                        </div>
+                        <h3 class="font-headline-lg text-headline-lg-mobile mb-xs">Hệ thống Rent-Shop</h3>
+                        <p class="font-body-md text-on-surface-variant mb-auto text-sm">Phần mềm quản lý trọn gói dành
+                            cho mô hình kinh doanh cho thuê đồ.</p>
+                        <div class="mt-md bg-surface-container-low p-sm rounded border-l-2 border-secondary">
+                            <span class="font-label-caps text-secondary block mb-1">GIÁ TRỊ MANG LẠI</span>
+                            <p class="font-body-md italic text-on-surface text-sm">Quản lý dòng tiền, sản phẩm và tự
+                                động hóa quy trình tính phí, giảm thiểu sai sót.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 5: Japan Job -->
+                <div
+                    class="md:col-span-4 group relative overflow-hidden bg-surface-container border border-outline-variant rounded-lg transition-all duration-300 hover:border-secondary/50">
+                    <div class="aspect-[4/3] w-full overflow-hidden">
+                        <img alt="Japan Job Platform"
+                            class="project-image w-full h-full object-cover transition-transform duration-500"
+                            data-alt="A minimalist and clean job portal interface with a Japanese aesthetic, featuring professional layouts and recruitment tools. The background is a crisp white and soft grey with subtle emerald green highlights. The photography used in the UI mockup shows modern Tokyo office scenes, emphasizing a bridge between talent and industry in a professional, high-signal design."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWGtPFJJynN3Sl0zOiFl3YsHV_RlAkPqCRixFvtGc_WZ_8DvQBbEjjuagghq4nthOdp9sxBBJ9kMoRC3RCYZWftLuTNLeCz3nNZ1NPnYinpjI8BcdIJTYL3lc5P-ra_XuSfSv3qXinTRilVN4ks-fUxnz1oEwWrw0Phl-xWGhHpEUFpHI7ZN3i8dsUnzpEc9F_RMBm8IqHcGdbeqTEZEWiDcxL4XYJF0CpeyIZLLlJC2X4QG6yKXmlT55SzQTFH51FY4TOEyLi0Rc" />
+                    </div>
+                    <div class="p-md">
+                        <div class="flex flex-wrap gap-xs mb-xs">
+                            <span
+                                class="font-code-sm text-code-sm bg-primary-container text-on-primary-container px-xs py-0.5 rounded">SEO</span>
+                            <span
+                                class="font-code-sm text-code-sm bg-primary-container text-on-primary-container px-xs py-0.5 rounded">Nuxt.js</span>
+                        </div>
+                        <h3 class="font-headline-lg text-headline-lg-mobile mb-xs">Japan Job Platform</h3>
+                        <div class="bg-surface-container-low p-sm rounded border-l-2 border-secondary">
+                            <span class="font-label-caps text-secondary block mb-1">GIÁ TRỊ MANG LẠI</span>
+                            <p class="font-body-md italic text-on-surface text-sm">Tối ưu công cụ tìm kiếm (Chuẩn SEO)
+                                giúp trang web xuất hiện trang đầu Google.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA Section -->
+        <section class="max-w-max-width mx-auto px-gutter py-xl text-center">
+            <div class="bg-surface-container-high p-lg rounded-xl border border-outline-variant">
+                <h2 class="font-headline-lg text-headline-lg mb-md">Bạn có ý tưởng cần hiện thực hóa?</h2>
+                <p class="font-body-md text-on-surface-variant mb-lg max-w-xl mx-auto">
+                    Tôi sẵn sàng lắng nghe và tư vấn giải pháp phần mềm tối ưu nhất cho doanh nghiệp của bạn.
+                    Tối giản - Dễ hiểu - Hiệu quả.
+                </p>
+                <div class="flex flex-col md:flex-row justify-center gap-md">
+                    <button
+                        class="bg-secondary text-on-secondary px-lg py-sm font-label-caps rounded-lg hover:brightness-110 active:scale-95 transition-all">LIÊN
+                        HỆ NGAY</button>
+                    <button
+                        class="border border-outline text-on-surface px-lg py-sm font-label-caps rounded-lg hover:bg-surface-container-low active:scale-95 transition-all">XEM
+                        KINH NGHIỆM</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest border-t border-outline-variant">
+        <div class="flex flex-col md:flex-row justify-between items-center py-lg px-gutter max-w-max-width mx-auto">
+            <div class="mb-md md:mb-0">
+                <div class="font-headline-lg text-headline-lg font-bold text-on-surface mb-2">TRẦN ĐĂNG KHOA</div>
+                <p class="font-body-md text-on-surface-variant text-sm">© 2024 Trần Đăng Khoa. Tối giản - Dễ hiểu - Hiệu
+                    quả.</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-md">
+                <a class="font-code-sm text-on-surface-variant hover:text-secondary transition-colors"
+                    href="mailto:khoatranpc603@gmail.com">Email</a>
+                <a class="font-code-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Zalo</a>
+                <a class="font-code-sm text-on-surface-variant hover:text-secondary transition-colors"
+                    href="https://github.com/khoatranpc">GitHub</a>
+                <span class="font-code-sm text-on-surface-variant">Ho Chi Minh City, VN</span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

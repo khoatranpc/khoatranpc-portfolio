@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Trần Đăng Khoa | Kinh nghiệm &amp; Kỹ thuật</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Geist:wght@600;700&amp;family=JetBrains+Mono:wght@400&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ffb4ab",
+                        "on-primary": "#283044",
+                        "on-surface": "#e0e3e5",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "surface-container": "#1d2022",
+                        "secondary-fixed": "#6ffbbe",
+                        "surface-dim": "#101415",
+                        "surface-container-low": "#191c1e",
+                        "inverse-primary": "#565e74",
+                        "tertiary": "#b7c8e1",
+                        "primary-container": "#0f172a",
+                        "inverse-on-surface": "#2d3133",
+                        "outline-variant": "#45464d",
+                        "secondary": "#4edea3",
+                        "inverse-surface": "#e0e3e5",
+                        "on-tertiary": "#213145",
+                        "background": "#101415",
+                        "on-error": "#690005",
+                        "surface": "#101415",
+                        "surface-tint": "#bec6e0",
+                        "on-primary-fixed": "#131b2e",
+                        "tertiary-fixed": "#d3e4fe",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "tertiary-container": "#06182b",
+                        "surface-container-lowest": "#0b0f10",
+                        "surface-container-highest": "#323537",
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "on-secondary": "#003824",
+                        "primary": "#bec6e0",
+                        "primary-fixed": "#dae2fd",
+                        "on-surface-variant": "#c6c6cd",
+                        "on-secondary-container": "#00311f",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#798098",
+                        "on-error-container": "#ffdad6",
+                        "on-background": "#e0e3e5",
+                        "on-tertiary-container": "#728299",
+                        "surface-container-high": "#272a2c",
+                        "surface-bright": "#363a3b",
+                        "secondary-fixed-dim": "#4edea3",
+                        "outline": "#909097",
+                        "secondary-container": "#00a572",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "surface-variant": "#323537",
+                        "on-secondary-fixed-variant": "#005236",
+                        "on-secondary-fixed": "#002113"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "lg": "48px",
+                        "max-width": "1200px",
+                        "md": "24px",
+                        "base": "4px",
+                        "sm": "16px",
+                        "xl": "80px",
+                        "xs": "8px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Geist"],
+                        "code-sm": ["JetBrains Mono"],
+                        "label-caps": ["Inter"],
+                        "display-lg": ["Geist"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Geist"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "code-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .experience-thread::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 24px;
+            bottom: 0;
+            width: 2px;
+            background-color: #45464d;
+        }
+
+        .experience-dot {
+            width: 16px;
+            height: 16px;
+            background-color: #101415;
+            border: 2px solid #4edea3;
+            border-radius: 50%;
+            position: relative;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary selection:text-on-secondary">
+    <!-- TopNavBar -->
+    <header
+        class="bg-surface dark:bg-surface border-b border-outline-variant dark:border-outline-variant sticky top-0 z-50">
+        <div class="flex justify-between items-center h-16 w-full px-gutter max-w-max-width mx-auto">
+            <div
+                class="font-headline-lg text-headline-lg font-bold tracking-tighter text-on-surface dark:text-on-surface">
+                TRẦN ĐĂNG KHOA
+            </div>
+            <nav class="hidden md:flex items-center gap-md">
+                <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary transition-colors font-body-md text-body-md"
+                    href="#">Projects</a>
+                <a class="text-secondary dark:text-secondary font-bold border-b-2 border-secondary pb-1 font-body-md text-body-md"
+                    href="#">Experience</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary transition-colors font-body-md text-body-md"
+                    href="#">Teaching</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary transition-colors font-body-md text-body-md"
+                    href="#">About</a>
+                <button
+                    class="ml-4 bg-secondary text-on-primary px-sm py-xs rounded-lg font-bold active:scale-95 duration-150 ease-in-out transition-all">Resume</button>
+            </nav>
+            <button class="md:hidden p-2 text-on-surface">
+                <span class="material-symbols-outlined" data-icon="menu">menu</span>
+            </button>
+        </div>
+    </header>
+    <main class="max-w-max-width mx-auto px-gutter py-xl">
+        <!-- Page Header -->
+        <div class="mb-xl">
+            <h1 class="font-display-lg text-display-lg text-on-surface mb-xs">Kinh nghiệm &amp; Kỹ thuật</h1>
+            <p class="text-on-surface-variant max-w-2xl font-body-md">
+                Kết hợp giữa tư duy kỹ thuật khắt khe của một Kỹ sư phần mềm và sự thấu cảm của một Nhà đào tạo công
+                nghệ.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-xl items-start">
+            <!-- Column 1: Career Timeline -->
+            <div class="lg:col-span-7 space-y-lg">
+                <h2 class="font-headline-lg text-headline-lg flex items-center gap-xs text-on-surface">
+                    <span class="material-symbols-outlined text-secondary" data-icon="work" data-weight="fill"
+                        style="font-variation-settings: 'FILL' 1;">work</span>
+                    Hành trình sự nghiệp
+                </h2>
+                <div class="space-y-xl pt-md">
+                    <!-- FPT IS -->
+                    <div class="relative pl-xl experience-thread">
+                        <div class="absolute left-0 top-1">
+                            <div class="experience-dot"></div>
+                        </div>
+                        <div class="bg-surface-container border border-outline-variant p-md rounded-lg shadow-sm">
+                            <div class="flex justify-between items-start mb-xs">
+                                <div>
+                                    <h3 class="font-headline-lg text-xl font-bold text-on-surface">Kỹ sư Phần mềm</h3>
+                                    <p class="text-secondary font-bold font-body-md">FPT IS</p>
+                                </div>
+                                <span
+                                    class="bg-surface-container-high px-sm py-xs rounded-full text-label-caps text-on-surface-variant">Hiện
+                                    tại</span>
+                            </div>
+                            <ul class="space-y-xs text-on-surface-variant font-body-md list-disc list-inside">
+                                <li>Phát triển nền tảng e-learning và thi trực tuyến quy mô lớn.</li>
+                                <li>Đảm bảo hệ thống vận hành ổn định cho hơn 10.000 người dùng mỗi ngày.</li>
+                                <li>Tối ưu hóa performance backend xử lý concurrency cao.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- MindX -->
+                    <div class="relative pl-xl experience-thread">
+                        <div class="absolute left-0 top-1">
+                            <div class="experience-dot"></div>
+                        </div>
+                        <div class="bg-surface-container border border-outline-variant p-md rounded-lg shadow-sm">
+                            <div class="flex justify-between items-start mb-xs">
+                                <div>
+                                    <h3 class="font-headline-lg text-xl font-bold text-on-surface">Kỹ sư Phần mềm &amp;
+                                        Chuyên gia Đào tạo</h3>
+                                    <p class="text-secondary font-bold font-body-md">MindX Technology School</p>
+                                </div>
+                                <span
+                                    class="bg-surface-container-high px-sm py-xs rounded-full text-label-caps text-on-surface-variant">06/2022
+                                    - Hiện tại</span>
+                            </div>
+                            <ul class="space-y-xs text-on-surface-variant font-body-md list-disc list-inside">
+                                <li>Xây dựng hệ sinh thái Quản lý Giáo dục thông minh ứng dụng AI.</li>
+                                <li>Ứng dụng AI tự động phân tích tin nhắn trao đổi của học viên.</li>
+                                <li>Đào tạo hơn 300 học viên làm chủ các công nghệ Fullstack hiện đại.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- FTL Vietnam -->
+                    <div class="relative pl-xl">
+                        <div class="absolute left-0 top-1">
+                            <div class="experience-dot"></div>
+                        </div>
+                        <div class="bg-surface-container border border-outline-variant p-md rounded-lg shadow-sm">
+                            <div class="flex justify-between items-start mb-xs">
+                                <div>
+                                    <h3 class="font-headline-lg text-xl font-bold text-on-surface">Lập trình viên Giao
+                                        diện</h3>
+                                    <p class="text-secondary font-bold font-body-md">FTL Vietnam</p>
+                                </div>
+                                <span
+                                    class="bg-surface-container-high px-sm py-xs rounded-full text-label-caps text-on-surface-variant">05/2022
+                                    - 07/2023</span>
+                            </div>
+                            <ul class="space-y-xs text-on-surface-variant font-body-md list-disc list-inside">
+                                <li>Phát triển các nền tảng tài chính khắt khe (Mas Mirae Asset, JBSV).</li>
+                                <li>Tối ưu tốc độ hiển thị biểu đồ và bảng giá real-time với độ trễ thấp nhất.</li>
+                                <li>Xây dựng UI/UX hiện đại cho các hệ thống giao dịch chứng khoán phức tạp.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Column 2: Technical Toolkit -->
+            <div class="lg:col-span-5 space-y-lg lg:sticky lg:top-24">
+                <h2 class="font-headline-lg text-headline-lg flex items-center gap-xs text-on-surface">
+                    <span class="material-symbols-outlined text-secondary" data-icon="terminal" data-weight="fill"
+                        style="font-variation-settings: 'FILL' 1;">terminal</span>
+                    Bộ công cụ Kỹ thuật
+                </h2>
+                <!-- Languages & Frameworks -->
+                <div class="bg-surface-container-lowest border border-outline-variant p-md rounded-lg">
+                    <h3
+                        class="font-label-caps text-label-caps text-on-tertiary-container mb-md flex items-center gap-xs">
+                        <span class="material-symbols-outlined text-sm" data-icon="code">code</span>
+                        LANGUAGES &amp; FRAMEWORKS
+                    </h3>
+                    <div class="space-y-md">
+                        <div>
+                            <div class="flex justify-between items-center mb-base">
+                                <span class="font-code-sm text-code-sm">Node.js / TypeScript</span>
+                                <span class="font-code-sm text-code-sm text-secondary">Expert</span>
+                            </div>
+                            <div class="h-[4px] w-full bg-outline-variant rounded-full overflow-hidden">
+                                <div class="h-full bg-secondary w-[95%]"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-base">
+                                <span class="font-code-sm text-code-sm">React / Next.js</span>
+                                <span class="font-code-sm text-code-sm text-secondary">Expert</span>
+                            </div>
+                            <div class="h-[4px] w-full bg-outline-variant rounded-full overflow-hidden">
+                                <div class="h-full bg-secondary w-[90%]"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-base">
+                                <span class="font-code-sm text-code-sm">Python / AI Integration</span>
+                                <span class="font-code-sm text-code-sm text-secondary">Advanced</span>
+                            </div>
+                            <div class="h-[4px] w-full bg-outline-variant rounded-full overflow-hidden">
+                                <div class="h-full bg-secondary w-[85%]"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-base">
+                                <span class="font-code-sm text-code-sm">Java / Backend</span>
+                                <span class="font-code-sm text-code-sm text-secondary">Advanced</span>
+                            </div>
+                            <div class="h-[4px] w-full bg-outline-variant rounded-full overflow-hidden">
+                                <div class="h-full bg-secondary w-[80%]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Architecture & Database -->
+                <div class="bg-surface-container-lowest border border-outline-variant p-md rounded-lg">
+                    <h3
+                        class="font-label-caps text-label-caps text-on-tertiary-container mb-md flex items-center gap-xs">
+                        <span class="material-symbols-outlined text-sm" data-icon="account_tree">account_tree</span>
+                        ARCHITECTURE &amp; DATA
+                    </h3>
+                    <div class="flex flex-wrap gap-xs">
+                        <span
+                            class="bg-surface-container-high border border-outline-variant px-sm py-xs rounded-lg font-code-sm text-code-sm text-on-surface">Microservices</span>
+                        <span
+                            class="bg-surface-container-high border border-outline-variant px-sm py-xs rounded-lg font-code-sm text-code-sm text-on-surface">Clean
+                            Architecture</span>
+                        <span
+                            class="bg-surface-container-high border border-outline-variant px-sm py-xs rounded-lg font-code-sm text-code-sm text-on-surface">PostgreSQL</span>
+                        <span
+                            class="bg-surface-container-high border border-outline-variant px-sm py-xs rounded-lg font-code-sm text-code-sm text-on-surface">MongoDB</span>
+                        <span
+                            class="bg-surface-container-high border border-outline-variant px-sm py-xs rounded-lg font-code-sm text-code-sm text-on-surface">gRPC</span>
+                        <span
+                            class="bg-surface-container-high border border-outline-variant px-sm py-xs rounded-lg font-code-sm text-code-sm text-on-surface">Kafka</span>
+                        <span
+                            class="bg-surface-container-high border border-outline-variant px-sm py-xs rounded-lg font-code-sm text-code-sm text-on-surface">WebSockets</span>
+                    </div>
+                </div>
+                <!-- DevOps & Tools -->
+                <div class="bg-surface-container-lowest border border-outline-variant p-md rounded-lg">
+                    <h3
+                        class="font-label-caps text-label-caps text-on-tertiary-container mb-md flex items-center gap-xs">
+                        <span class="material-symbols-outlined text-sm"
+                            data-icon="settings_suggest">settings_suggest</span>
+                        DEVOPS &amp; OPERATIONAL
+                    </h3>
+                    <div class="space-y-sm">
+                        <div class="flex items-center gap-md">
+                            <div
+                                class="w-10 h-10 flex items-center justify-center bg-surface-container rounded-lg border border-outline-variant">
+                                <span class="material-symbols-outlined text-secondary" data-icon="cloud">cloud</span>
+                            </div>
+                            <div>
+                                <p class="font-body-md font-bold text-on-surface">AWS / Cloud</p>
+                                <p class="font-code-sm text-xs text-on-surface-variant">Infrastructure Management</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-md">
+                            <div
+                                class="w-10 h-10 flex items-center justify-center bg-surface-container rounded-lg border border-outline-variant">
+                                <span class="material-symbols-outlined text-secondary"
+                                    data-icon="view_in_ar">view_in_ar</span>
+                            </div>
+                            <div>
+                                <p class="font-body-md font-bold text-on-surface">Docker / Container</p>
+                                <p class="font-code-sm text-xs text-on-surface-variant">Deployment &amp; Scalability</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-md">
+                            <div
+                                class="w-10 h-10 flex items-center justify-center bg-surface-container rounded-lg border border-outline-variant">
+                                <span class="material-symbols-outlined text-secondary"
+                                    data-icon="terminal">terminal</span>
+                            </div>
+                            <div>
+                                <p class="font-body-md font-bold text-on-surface">Linux Admin</p>
+                                <p class="font-code-sm text-xs text-on-surface-variant">Server Management</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bento Style Insight Card -->
+                <div
+                    class="bg-primary-container border border-outline-variant p-md rounded-lg relative overflow-hidden group">
+                    <div class="relative z-10">
+                        <h4 class="font-headline-lg text-lg text-secondary mb-xs">Triết lý thiết kế</h4>
+                        <p class="text-on-primary-container italic font-body-md">"Tối giản - Dễ hiểu - Hiệu quả"</p>
+                    </div>
+                    <div class="absolute -right-4 -bottom-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <span class="material-symbols-outlined text-[100px]" data-icon="psychology">psychology</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant dark:border-outline-variant">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center py-lg px-gutter max-w-max-width mx-auto gap-md">
+            <div
+                class="text-on-surface-variant dark:text-on-surface-variant font-body-md text-body-md text-center md:text-left">
+                © 2024 Trần Đăng Khoa. Tối giản - Dễ hiểu - Hiệu quả.
+            </div>
+            <div class="flex flex-wrap justify-center gap-md">
+                <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary transition-colors font-code-sm text-code-sm"
+                    href="mailto:khoatranpc603@gmail.com">Email</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary transition-colors font-code-sm text-code-sm"
+                    href="#">Zalo</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary transition-colors font-code-sm text-code-sm"
+                    href="https://github.com/khoatranpc">GitHub</a>
+                <span class="text-on-surface-variant dark:text-on-surface-variant font-code-sm text-code-sm">Ho Chi Minh
+                    City, VN</span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
