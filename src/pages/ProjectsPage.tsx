@@ -3,6 +3,44 @@ import { Seo } from "../components/Seo";
 import { PROJECT_IMAGES } from "../data/projectMedia";
 import { useI18n } from "../i18n/useI18n";
 
+function SummaryLines({
+  messageKey,
+  className,
+}: {
+  messageKey: string;
+  className: string;
+}) {
+  const { tb } = useI18n();
+  const lines = tb(messageKey);
+  if (!lines.length) return null;
+  return (
+    <div className={`space-y-1.5 ${className}`}>
+      {lines.map((line, i) => (
+        <p key={i}>{line}</p>
+      ))}
+    </div>
+  );
+}
+
+function ValueDeliveredLines({ messageKey }: { messageKey: string }) {
+  const { tb } = useI18n();
+  const lines = tb(messageKey);
+  if (!lines.length) return null;
+  return (
+    <ul className="mt-1.5 list-none space-y-2 pl-0 font-body-md leading-snug text-on-surface">
+      {lines.map((line, i) => (
+        <li key={i} className="flex gap-2.5">
+          <span
+            className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary"
+            aria-hidden
+          />
+          <span>{line}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 export function ProjectsPage() {
   const { t } = useI18n();
 
@@ -18,9 +56,10 @@ export function ProjectsPage() {
           <h1 className="mb-xs font-display-lg text-display-lg">
             {t("projects.title")}
           </h1>
-          <p className="max-w-2xl font-body-md text-on-surface-variant">
-            {t("projects.intro")}
-          </p>
+          <SummaryLines
+            messageKey="projects.introLines"
+            className="max-w-2xl font-body-md text-on-surface-variant"
+          />
         </div>
 
         <div className="grid grid-cols-1 gap-md md:grid-cols-12">
@@ -47,16 +86,17 @@ export function ProjectsPage() {
               <h3 className="mb-xs font-headline-lg text-headline-lg">
                 {t("projects.fptTitle")}
               </h3>
-              <p className="mb-md font-body-md text-on-surface-variant">
-                {t("projects.fptDesc")}
-              </p>
+              <div className="mb-md">
+                <SummaryLines
+                  messageKey="projects.fptDescLines"
+                  className="font-body-md text-on-surface-variant"
+                />
+              </div>
               <div className="rounded border-l-2 border-secondary bg-surface-container-low p-sm">
                 <span className="mb-1 block font-label-caps text-label-caps text-secondary">
                   {t("common.valueDelivered")}
                 </span>
-                <p className="font-body-md italic text-on-surface">
-                  {t("projects.fptValue")}
-                </p>
+                <ValueDeliveredLines messageKey="projects.fptValueLines" />
               </div>
             </div>
           </div>
@@ -84,16 +124,17 @@ export function ProjectsPage() {
               <h3 className="mb-xs font-headline-lg text-headline-lg-mobile">
                 {t("projects.tradeTitle")}
               </h3>
-              <p className="mb-md font-body-md text-sm text-on-surface-variant">
-                {t("projects.tradeDesc")}
-              </p>
+              <div className="mb-md">
+                <SummaryLines
+                  messageKey="projects.tradeDescLines"
+                  className="font-body-md text-sm text-on-surface-variant"
+                />
+              </div>
               <div className="rounded border-l-2 border-secondary bg-surface-container-low p-sm">
                 <span className="mb-1 block font-label-caps text-label-caps text-secondary">
                   {t("common.valueDelivered")}
                 </span>
-                <p className="font-body-md italic text-sm text-on-surface">
-                  {t("projects.tradeValue")}
-                </p>
+                <ValueDeliveredLines messageKey="projects.tradeValueLines" />
               </div>
             </div>
           </div>
@@ -121,13 +162,17 @@ export function ProjectsPage() {
               <h3 className="mb-xs font-headline-lg text-headline-lg-mobile">
                 {t("projects.mindxTitle")}
               </h3>
+              <div className="mb-md">
+                <SummaryLines
+                  messageKey="projects.mindxDescLines"
+                  className="font-body-md text-sm text-on-surface-variant"
+                />
+              </div>
               <div className="rounded border-l-2 border-secondary bg-surface-container-low p-sm">
                 <span className="mb-1 block font-label-caps text-label-caps text-secondary">
                   {t("common.valueDelivered")}
                 </span>
-                <p className="font-body-md italic text-sm text-on-surface">
-                  {t("projects.mindxValue")}
-                </p>
+                <ValueDeliveredLines messageKey="projects.mindxValueLines" />
               </div>
             </div>
           </div>
@@ -152,16 +197,17 @@ export function ProjectsPage() {
               <h3 className="mb-xs font-headline-lg text-headline-lg-mobile">
                 {t("projects.rentTitle")}
               </h3>
-              <p className="mb-md font-body-md text-sm text-on-surface-variant">
-                {t("projects.rentDesc")}
-              </p>
+              <div className="mb-md">
+                <SummaryLines
+                  messageKey="projects.rentDescLines"
+                  className="font-body-md text-sm text-on-surface-variant"
+                />
+              </div>
               <div className="rounded border-l-2 border-secondary bg-surface-container-low p-sm">
                 <span className="mb-1 block font-label-caps text-label-caps text-secondary">
                   {t("common.valueDelivered")}
                 </span>
-                <p className="font-body-md italic text-sm text-on-surface">
-                  {t("projects.rentValue")}
-                </p>
+                <ValueDeliveredLines messageKey="projects.rentValueLines" />
               </div>
             </div>
           </div>
@@ -190,9 +236,7 @@ export function ProjectsPage() {
                 <span className="mb-1 block font-label-caps text-label-caps text-secondary">
                   {t("common.valueDelivered")}
                 </span>
-                <p className="font-body-md italic text-sm text-on-surface">
-                  {t("projects.japanValue")}
-                </p>
+                <ValueDeliveredLines messageKey="projects.japanValueLines" />
               </div>
             </div>
           </div>
@@ -204,9 +248,12 @@ export function ProjectsPage() {
           <h2 className="mb-md font-headline-lg text-headline-lg">
             {t("projects.ctaTitle")}
           </h2>
-          <p className="mx-auto mb-lg font-body-md text-on-surface-variant">
-            {t("projects.ctaBody")}
-          </p>
+          <div className="mx-auto mb-lg max-w-2xl">
+            <SummaryLines
+              messageKey="projects.ctaBodyLines"
+              className="font-body-md text-on-surface-variant"
+            />
+          </div>
           <div className="flex flex-col justify-center gap-md md:flex-row">
             <a
               className="rounded-lg bg-secondary px-lg py-sm font-label-caps text-label-caps text-on-secondary transition-all hover:brightness-110 active:scale-95"

@@ -148,32 +148,59 @@ export const messages = {
     },
     projects: {
       title: 'Dự án tiêu biểu',
-      intro:
-        'Tuyển tập các sản phẩm công nghệ tôi đã trực tiếp thiết kế và xây dựng, tập trung vào tính hiệu quả, khả năng chịu tải cao và ứng dụng trí tuệ nhân tạo.',
+      introLines: [
+        'Tuyển tập các sản phẩm công nghệ tôi đã trực tiếp thiết kế và xây dựng.',
+        'Trọng tâm: hiệu quả vận hành, khả năng chịu tải cao và ứng dụng trí tuệ nhân tạo.',
+      ],
       tagHighLoad: 'Chịu tải cao',
       fptTitle: 'Hệ thống Học tập & Thi cử trực tuyến (FPT IS)',
-      fptDesc:
-        'Nền tảng học tập và thi cử trực tuyến quy mô lớn, phục vụ hàng chục ngàn người dùng đồng thời.',
-      fptValue:
-        'Tối ưu backend: giảm lên tới 75% thời gian phản hồi API nộp bài (~200ms→~50ms, Grafana & log request); lên tới 3.000+ người dùng đồng thời nộp bài trong kỳ thi thật; uptime lên tới 99,9% kỳ thi cao điểm.',
+      fptDescLines: [
+        'Nền tảng học tập và thi cử trực tuyến quy mô lớn.',
+        'Phục vụ hàng chục ngàn người dùng đồng thời.',
+      ],
+      fptValueLines: [
+        'Tối ưu backend: giảm lên tới 75% thời gian phản hồi API nộp bài (~200ms→~50ms; Grafana & log request).',
+        'Đồng thời: lên tới 3.000+ người dùng cùng nộp bài trong kỳ thi thật.',
+        'Độ ổn định: uptime lên tới 99,9% trong các kỳ thi cao điểm.',
+      ],
       tradeTitle: 'Nền tảng Giao dịch Chứng khoán',
-      tradeDesc: 'Hệ thống theo dõi và giao dịch chứng khoán (Mas Mirae Asset & JBSV).',
-      tradeValue:
-        'Tối ưu code front-end: cải thiện lên tới 60% tốc độ render biểu đồ realtime (Chrome Performance), ~60fps với hàng nghìn bản tin/giây; giảm độ trễ & lag UI; WebSocket giá server→UI lên tới dưới 100ms.',
+      tradeDescLines: [
+        'Hệ thống theo dõi và giao dịch chứng khoán (Mas Mirae Asset & JBSV).',
+      ],
+      tradeValueLines: [
+        'Tối ưu front-end: cải thiện lên tới 60% tốc độ render biểu đồ realtime (Chrome Performance), ~60fps với hàng nghìn bản tin/giây.',
+        'Giảm độ trễ và hiện tượng lag UI.',
+        'WebSocket: giá server→UI dưới 100ms.',
+      ],
       mindxTitle: 'Hệ sinh thái Giáo dục (MindX Tech)',
-      mindxValue:
-        'AI (OpenAI/Gemini): phân loại lên tới 80% tin nhắn học viên/tháng; CSKH giảm lên tới 40% thời gian xử lý thủ công; 500+ học viên, hoàn thành khóa lập trình lên tới 90% (CRM); R&D nội dung đào tạo + AI, hiệu quả so với quy trình cũ (thống kê nội bộ).',
+      mindxDescLines: [
+        'MindX Tech: sản phẩm (AI) và đào tạo lập trình thực chiến.',
+      ],
+      mindxValueLines: [
+        'AI (OpenAI/Gemini): phân loại lên tới 80% tin nhắn học viên/tháng.',
+        'CSKH: giảm lên tới 40% thời gian xử lý thủ công so với trước.',
+        '500+ học viên; hoàn thành khóa lập trình lên tới 90% (CRM).',
+        'R&D nội dung đào tạo + AI; hiệu quả so với quy trình cũ (thống kê nội bộ).',
+      ],
       rentTitle: 'Hệ thống Rent-Shop',
       rentImgAlt: 'Giao diện quản lý kho và cho thuê (minh họa)',
-      rentDesc: 'Phần mềm quản lý trọn gói dành cho mô hình kinh doanh cho thuê đồ.',
-      rentValue:
-        'Quản lý dòng tiền, sản phẩm và tự động hóa quy trình tính phí, giảm thiểu sai sót.',
+      rentDescLines: [
+        'Phần mềm quản lý trọn gói dành cho mô hình kinh doanh cho thuê đồ.',
+      ],
+      rentValueLines: [
+        'Quản lý dòng tiền và tồn kho trong một luồng thống nhất.',
+        'Tự động hóa tính phí, giảm thiểu sai sót thao tác.',
+      ],
       japanTitle: 'Japan Job Platform',
-      japanValue:
-        'Tối ưu công cụ tìm kiếm (Chuẩn SEO) giúp trang web xuất hiện trang đầu Google.',
+      japanValueLines: [
+        'Tối ưu công cụ tìm kiếm, chuẩn SEO.',
+        'Mục tiêu: hiển thị trên trang đầu Google.',
+      ],
       ctaTitle: 'Bạn có ý tưởng cần hiện thực hóa?',
-      ctaBody:
-        'Tôi sẵn sàng lắng nghe và tư vấn giải pháp phần mềm tối ưu nhất cho doanh nghiệp của bạn. Tối giản - Dễ hiểu - Hiệu quả.',
+      ctaBodyLines: [
+        'Tôi sẵn sàng lắng nghe và tư vấn giải pháp phần mềm phù hợp cho doanh nghiệp của bạn.',
+        'Tối giản — Dễ hiểu — Hiệu quả.',
+      ],
       ctaContact: 'Liên hệ ngay',
       ctaExperience: 'Xem kinh nghiệm',
     },
@@ -429,29 +456,59 @@ export const messages = {
     },
     projects: {
       title: 'Featured projects',
-      intro:
-        'A selection of products I have designed and built—focused on reliability, high load, and applied AI.',
+      introLines: [
+        'A selection of products I have designed and built end-to-end.',
+        'Focus: operational reliability, high load, and applied AI.',
+      ],
       tagHighLoad: 'High load',
       fptTitle: 'Online learning & exams (FPT IS)',
-      fptDesc: 'Large-scale LMS and online examination for tens of thousands of concurrent users.',
-      fptValue:
-        'Backend: cut API latency for exam submit by up to 75% (~200ms→~50ms, Grafana & request logs in production); up to 3,000+ concurrent “Submit” presses in real exam windows; uptime up to 99.9% during peak seasons.',
+      fptDescLines: [
+        'Large-scale LMS and online examination.',
+        'Tens of thousands of concurrent users.',
+      ],
+      fptValueLines: [
+        'Backend tuning: cut exam-submit API latency by up to 75% (~200ms→~50ms; Grafana & request logs in production).',
+        'Concurrency: up to 3,000+ users submitting at once during real exam windows.',
+        'Reliability: uptime up to 99.9% through peak exam seasons.',
+      ],
       tradeTitle: 'Securities trading platform',
-      tradeDesc: 'Trading and market terminals (Mas Mirae Asset & JBSV).',
-      tradeValue:
-        'Frontend code: up to +60% faster realtime chart rendering (Chrome Performance), ~60fps with thousands of ticks/sec; less UI lag/jank; WebSocket price updates server→UI down to under 100ms.',
+      tradeDescLines: [
+        'Trading and market terminals (Mas Mirae Asset & JBSV).',
+      ],
+      tradeValueLines: [
+        'Front-end tuning: up to ~60% faster realtime chart rendering (Chrome Performance), ~60fps with thousands of ticks/sec.',
+        'Less UI lag and jank.',
+        'WebSocket price updates server→UI under ~100ms.',
+      ],
       mindxTitle: 'Education ecosystem (MindX Tech)',
-      mindxValue:
-        'AI (OpenAI/Gemini): automated classification for up to 80% of learner feedback messages per month; up to 40% less manual CS handling vs before; 500+ learners, up to 90% programming course completion (CRM); programming training content R&D with AI versus the previous process (internal stats).',
+      mindxDescLines: [
+        'MindX Tech: product (AI) and hands-on programming training.',
+      ],
+      mindxValueLines: [
+        'AI (OpenAI/Gemini): automated classification for up to 80% of learner messages per month.',
+        'Support: up to 40% less manual CS handling vs before.',
+        '500+ learners; up to 90% programming course completion (CRM).',
+        'Training content R&D with AI vs the previous process (internal stats).',
+      ],
       rentTitle: 'Rent-Shop management',
       rentImgAlt: 'Inventory and rental management UI (illustration)',
-      rentDesc: 'End-to-end software for rental businesses.',
-      rentValue: 'Cash flow, inventory, and automated billing with fewer errors.',
+      rentDescLines: [
+        'End-to-end software for rental businesses.',
+      ],
+      rentValueLines: [
+        'Unified cash flow and inventory workflows.',
+        'Automated billing with fewer manual errors.',
+      ],
       japanTitle: 'Japan Job Platform',
-      japanValue: 'SEO-focused job portal designed to rank on Google’s first page.',
+      japanValueLines: [
+        'Search and SEO tuned for discoverability.',
+        'Goal: first-page visibility on Google.',
+      ],
       ctaTitle: 'Have an idea to ship?',
-      ctaBody:
-        'I am happy to listen and propose lean software solutions for your business. Minimal — Clear — Effective.',
+      ctaBodyLines: [
+        'I am happy to listen and propose lean software solutions for your business.',
+        'Minimal — Clear — Effective.',
+      ],
       ctaContact: 'Contact now',
       ctaExperience: 'See experience',
     },
