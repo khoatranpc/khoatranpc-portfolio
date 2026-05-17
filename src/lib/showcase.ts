@@ -2,6 +2,7 @@ import rentShopFeatureModules from '../data/rentShopFeatureModules.json'
 import showcaseData from '../data/showcaseProjects.json'
 import type { Locale } from '../i18n/messages'
 import { resolveShowcaseAssetPath } from './showcaseAssets'
+import { absoluteUrl } from '../seo/site'
 import type {
   LocalizedString,
   ResolvedShowcaseImage,
@@ -42,6 +43,39 @@ export function getProjectThumbnailSrc(project: ShowcaseProject): string {
   const file = project.thumbnailFile?.trim() ?? ''
   if (!file) return ''
   return resolveShowcaseAssetPath(project.imageFolder, file)
+}
+
+export function getProjectSeo(
+  project: ShowcaseProject,
+  locale: Locale,
+): { title: string; description: string } {
+  return {
+    title: project.seo?.title
+      ? pickLocalized(project.seo.title, locale)
+      : pickLocalized(project.title, locale),
+    description: project.seo?.description
+      ? pickLocalized(project.seo.description, locale)
+      : pickLocalized(project.pitch, locale),
+  }
+}
+
+export function buildShowcaseProjectJsonLd(
+  project: ShowcaseProject,
+  locale: Locale,
+): Record<string, unknown> {
+  const { title, description } = getProjectSeo(project, locale)
+  const path = `/work/${project.slug}`
+  const thumb = getProjectThumbnailSrc(project)
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: title,
+    description,
+    url: absoluteUrl(path),
+    applicationCategory: 'BusinessApplication',
+    ...(thumb ? { image: thumb.startsWith('http') ? thumb : absoluteUrl(thumb) } : {}),
+  }
 }
 
 /** Ảnh demo đã resolve từ `src/assets/showcase/{imageFolder}/` (bỏ mục thiếu file). */

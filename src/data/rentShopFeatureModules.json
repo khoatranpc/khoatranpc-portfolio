@@ -26,6 +26,12 @@
               "vi": "Tìm và lọc theo tên, mã hàng, danh mục — dữ liệu luôn đồng bộ với kho nội bộ",
               "en": "Search and filter by name, SKU, and category — always in sync with your inventory"
             }
+          },
+          {
+            "label": {
+              "vi": "SEO cho từng trang sản phẩm: tiêu đề, mô tả hiển thị đẹp trên Google",
+              "en": "Per-product SEO: custom titles and descriptions for search results"
+            }
           }
         ]
       },
@@ -39,6 +45,12 @@
         "label": {
           "vi": "Trang giới thiệu tổng quan hệ thống — phù hợp trình bày hoặc onboarding",
           "en": "System overview page for presentations or onboarding"
+        }
+      },
+      {
+        "label": {
+          "vi": "Trang công khai tối ưu SEO: tiêu đề, mô tả, ảnh chia sẻ — giúp khách tìm thấy shop trên công cụ tìm kiếm",
+          "en": "SEO-ready public pages with titles, descriptions, and share images so customers can find your shop online"
         }
       }
     ]
@@ -141,6 +153,12 @@
         "label": {
           "vi": "Đồng bộ danh mục sang trang công khai — khách luôn thấy đúng hàng đang cho thuê",
           "en": "Categories sync to the public catalog so customers always see what's available"
+        }
+      },
+      {
+        "label": {
+          "vi": "Chỉnh SEO danh mục và thông tin sản phẩm ngay trong khu quản trị",
+          "en": "Edit category and product SEO from the admin area"
         }
       }
     ]

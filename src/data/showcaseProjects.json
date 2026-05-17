@@ -284,6 +284,16 @@
       },
       "thumbnailFile": "thumbnail.png",
       "demoImages": [],
+      "seo": {
+        "title": {
+          "vi": "Rent-Shop — Phần mềm quản lý cho thuê đồ",
+          "en": "Rent-Shop — rental shop management software"
+        },
+        "description": {
+          "vi": "Phần mềm cho shop cho thuê: trang công khai có SEO, quản lý đơn, thu chi và dashboard. Xem phạm vi tính năng và demo.",
+          "en": "Rental shop software with SEO-ready public pages, orders, cash flow, and dashboard. Explore features and demo."
+        }
+      },
       "title": {
         "vi": "Rent-Shop — Hệ thống quản lý cho thuê",
         "en": "Rent-Shop — rental management platform"
@@ -335,7 +345,7 @@
       "roles": ["frontend", "fullstack"],
       "status": "live",
       "stack": {
-        "fe": ["Nuxt.js", "Vue", "TypeScript"],
+        "fe": ["Next.js", "React", "TypeScript"],
         "be": ["Node.js"],
         "infra": ["AWS"]
       },
@@ -354,8 +364,8 @@
         "en": "Job listings struggled on Google; on-site search did not match user needs."
       },
       "solution": {
-        "vi": "Tối ưu SEO technical, cấu trúc nội dung và search front-end trên Nuxt.js.",
-        "en": "Technical SEO, content structure, and front-end search on Nuxt.js."
+        "vi": "Tối ưu SEO technical, cấu trúc nội dung và search front-end trên Next.js.",
+        "en": "Technical SEO, content structure, and front-end search on Next.js."
       },
       "roleDetail": {
         "vi": "Phát triển front-end / fullstack — SEO, search và UI.",

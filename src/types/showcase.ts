@@ -36,6 +36,12 @@ export type ShowcaseFeatureModule = {
   items: ShowcaseFeatureItem[]
 }
 
+/** Meta SEO riêng cho trang portfolio `/work/:slug` (tùy chọn). */
+export type ShowcaseSeo = {
+  title?: LocalizedString
+  description?: LocalizedString
+}
+
 export type ShowcaseProject = {
   slug: string
   featured: boolean
@@ -61,6 +67,7 @@ export type ShowcaseProject = {
   deliverables: LocalizedString[]
   /** Phạm vi tính năng (quảng bá) — tùy chọn, theo module nghiệp vụ. */
   featureModules?: ShowcaseFeatureModule[]
+  seo?: ShowcaseSeo
 }
 
 export type ShowcaseData = {

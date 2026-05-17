@@ -7,6 +7,8 @@ import { ShowcaseFeatureModules } from '../components/ShowcaseFeatureModules'
 import { ShowcaseThumbnail } from '../components/ShowcaseThumbnail'
 import {
   allStackTags,
+  buildShowcaseProjectJsonLd,
+  getProjectSeo,
   getProjectThumbnailSrc,
   getShowcaseProject,
   pickLocalized,
@@ -43,6 +45,7 @@ export function WorkDetailPage() {
 
   const title = pickLocalized(project.title, locale)
   const pitch = pickLocalized(project.pitch, locale)
+  const pageSeo = getProjectSeo(project, locale)
   const related = relatedShowcaseProjects(project)
   const mailSubject = `${t('work.detailMailSubject')}: ${title}`
   const thumbnailSrc = getProjectThumbnailSrc(project)
@@ -50,10 +53,11 @@ export function WorkDetailPage() {
   return (
     <div className="pb-xl pt-xl">
       <Seo
-        title={title}
-        description={pitch}
+        title={pageSeo.title}
+        description={pageSeo.description}
         path={`/work/${project.slug}`}
         imageUrl={thumbnailSrc || undefined}
+        jsonLd={buildShowcaseProjectJsonLd(project, locale)}
       />
 
       <article className="mx-auto max-w-max-width px-gutter py-xl">

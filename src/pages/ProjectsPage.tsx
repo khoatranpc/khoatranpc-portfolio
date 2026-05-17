@@ -240,7 +240,10 @@ export function ProjectsPage() {
                   SEO
                 </span>
                 <span className="rounded bg-primary-container px-xs py-0.5 font-code-sm text-code-sm text-on-primary-container">
-                  Nuxt.js
+                  Next.js
+                </span>
+                <span className="rounded bg-primary-container px-xs py-0.5 font-code-sm text-code-sm text-on-primary-container">
+                  React
                 </span>
               </div>
               <h3 className="mb-xs font-headline-lg text-headline-lg-mobile">
