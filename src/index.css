@@ -175,6 +175,7 @@
   border: 1px solid #45464d;
 }
 
-.cta-dialog::backdrop {
+.cta-dialog::backdrop,
+.demo-lightbox-dialog::backdrop {
   background-color: rgb(0 0 0 / 0.55);
 }

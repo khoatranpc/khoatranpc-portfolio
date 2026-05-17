@@ -1,0 +1,302 @@
+[
+  {
+    "title": {
+      "vi": "Trang công khai cho khách",
+      "en": "Public storefront for customers"
+    },
+    "summary": {
+      "vi": "Khách xem sản phẩm và nhận diện cửa hàng trước khi nhân viên đăng nhập.",
+      "en": "Customers browse products and see your brand before staff sign in."
+    },
+    "items": [
+      {
+        "label": {
+          "vi": "Trang giới thiệu cửa hàng, logo và favicon theo từng shop",
+          "en": "Branded welcome page with shop logo and dynamic favicon"
+        }
+      },
+      {
+        "label": {
+          "vi": "Danh mục sản phẩm cho khách xem trước khi thuê",
+          "en": "Public product catalog customers can browse before renting"
+        },
+        "children": [
+          {
+            "label": {
+              "vi": "Tìm và lọc theo tên, mã hàng, danh mục — dữ liệu luôn đồng bộ với kho nội bộ",
+              "en": "Search and filter by name, SKU, and category — always in sync with your inventory"
+            }
+          }
+        ]
+      },
+      {
+        "label": {
+          "vi": "Hiển thị tên cửa hàng và logo trên giao diện công khai",
+          "en": "Shop name and logo on the public-facing site"
+        }
+      },
+      {
+        "label": {
+          "vi": "Trang giới thiệu tổng quan hệ thống — phù hợp trình bày hoặc onboarding",
+          "en": "System overview page for presentations or onboarding"
+        }
+      }
+    ]
+  },
+  {
+    "title": {
+      "vi": "Đăng nhập cho nhân viên",
+      "en": "Staff sign-in"
+    },
+    "items": [
+      {
+        "label": {
+          "vi": "Cổng đăng nhập riêng cho nhân viên, tự chuyển đúng khu vực quản trị sau khi xác thực",
+          "en": "Dedicated staff login with automatic redirect to the right admin area after sign-in"
+        }
+      }
+    ]
+  },
+  {
+    "title": {
+      "vi": "Hồ sơ & cài đặt cửa hàng",
+      "en": "Shop profile & settings"
+    },
+    "items": [
+      {
+        "label": {
+          "vi": "Chỉnh sửa thông tin kinh doanh của cửa hàng",
+          "en": "Edit your shop's business profile"
+        },
+        "children": [
+          {
+            "label": {
+              "vi": "Tên kinh doanh, mã số thuế, liên hệ, địa chỉ, mạng xã hội và logo",
+              "en": "Legal name, tax ID, contacts, address, social links, and logo"
+            }
+          },
+          {
+            "label": {
+              "vi": "Lưu lịch sử thay đổi và khôi phục cấu hình khi cần",
+              "en": "Change history and one-click restore of previous settings"
+            }
+          },
+          {
+            "label": {
+              "vi": "Phân quyền theo vai trò: trang bán, quản lý vận hành, thư viện media",
+              "en": "Role-based access for storefront, operations, and media library"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": {
+      "vi": "Thư viện ảnh & video",
+      "en": "Photo & video library"
+    },
+    "items": [
+      {
+        "label": {
+          "vi": "Quản lý file tập trung cho toàn hệ thống",
+          "en": "Central file management for the whole system"
+        },
+        "children": [
+          {
+            "label": {
+              "vi": "Tách riêng thư mục ảnh và video",
+              "en": "Separate folders for images and videos"
+            }
+          },
+          {
+            "label": {
+              "vi": "Tải lên cloud, lưu trữ ổn định và tối ưu cho web",
+              "en": "Cloud uploads optimized for fast, reliable delivery on the web"
+            }
+          },
+          {
+            "label": {
+              "vi": "Chọn ảnh một lần, dùng lại ở sản phẩm, cửa hàng và các màn hình khác",
+              "en": "Pick once, reuse across products, shop settings, and other screens"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": {
+      "vi": "Sản phẩm & danh mục",
+      "en": "Products & categories"
+    },
+    "items": [
+      {
+        "label": {
+          "vi": "Thêm, sửa, xóa sản phẩm và quản lý biến thể (size, màu, gói thuê…)",
+          "en": "Add, edit, remove products and manage variants (size, color, rental packages…)"
+        }
+      },
+      {
+        "label": {
+          "vi": "Đồng bộ danh mục sang trang công khai — khách luôn thấy đúng hàng đang cho thuê",
+          "en": "Categories sync to the public catalog so customers always see what's available"
+        }
+      }
+    ]
+  },
+  {
+    "title": {
+      "vi": "Khách hàng",
+      "en": "Customers"
+    },
+    "items": [
+      {
+        "label": {
+          "vi": "Hồ sơ khách: thông tin liên hệ và lịch sử giao dịch",
+          "en": "Customer profiles with contact details and transaction history"
+        },
+        "children": [
+          {
+            "label": {
+              "vi": "Xem nhanh đơn thuê, hóa đơn, thu chi và số liệu trên dashboard",
+              "en": "Quick view of rental orders, invoices, cash flow, and dashboard metrics"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": {
+      "vi": "Đơn thuê & hóa đơn",
+      "en": "Rental orders & invoices"
+    },
+    "items": [
+      {
+        "label": {
+          "vi": "Tạo và theo dõi đơn từ lúc đặt đến khi trả đồ",
+          "en": "Create and track orders from booking through return"
+        }
+      },
+      {
+        "label": {
+          "vi": "Xem trước hóa đơn và xuất PDF gửi khách",
+          "en": "Invoice preview and PDF export for customers"
+        }
+      },
+      {
+        "label": {
+          "vi": "Nhắc nhở đơn sắp đến hạn, quá hạn — cập nhật realtime trên màn hình",
+          "en": "Real-time alerts for upcoming and overdue returns"
+        }
+      },
+      {
+        "label": {
+          "vi": "Xuất hàng loạt đơn thuê kèm dòng tiền trong một file nén",
+          "en": "Bulk export of orders and cash-flow records in one ZIP file"
+        }
+      }
+    ]
+  },
+  {
+    "title": {
+      "vi": "Thu chi & dòng tiền",
+      "en": "Income, expenses & cash flow"
+    },
+    "items": [
+      {
+        "label": {
+          "vi": "Ghi nhận phiếu thu, phiếu chi và gắn với đơn hoặc nguồn phát sinh",
+          "en": "Record income and expense vouchers linked to orders or their source"
+        },
+        "children": [
+          {
+            "label": {
+              "vi": "Phân loại thu nhập, chi phí theo danh mục riêng của shop",
+              "en": "Categorize income and expenses with your own chart of accounts"
+            }
+          },
+          {
+            "label": {
+              "vi": "Xóa nhầm có thể khôi phục; báo cáo tổng hợp theo kỳ",
+              "en": "Recover accidental deletes; period summaries for reporting"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": {
+      "vi": "Dashboard tổng quan",
+      "en": "Business dashboard"
+    },
+    "items": [
+      {
+        "label": {
+          "vi": "Số liệu tài chính và cảnh báo quan trọng ngay khi mở hệ thống",
+          "en": "Key financial figures and alerts as soon as you open the app"
+        }
+      },
+      {
+        "label": {
+          "vi": "Kiểm soát ai được xem dashboard và phần nào",
+          "en": "Control who can view the dashboard and which sections they see"
+        }
+      }
+    ]
+  },
+  {
+    "title": {
+      "vi": "Nhân viên & phân quyền",
+      "en": "Team & permissions"
+    },
+    "items": [
+      {
+        "label": {
+          "vi": "Danh sách nhân viên và tóm tắt hoạt động",
+          "en": "Staff directory with activity summaries"
+        }
+      },
+      {
+        "label": {
+          "vi": "Xem chi tiết hành vi từng người dùng trên giao diện quản trị",
+          "en": "Drill into individual user activity from the admin UI"
+        }
+      },
+      {
+        "label": {
+          "vi": "Tùy chỉnh quyền xem / chỉnh sửa theo từng chức năng",
+          "en": "Fine-tune view and edit rights per feature"
+        }
+      },
+      {
+        "label": {
+          "vi": "Tạo tài khoản nhân viên tự động qua tích hợp hệ thống",
+          "en": "Provision staff accounts automatically via system integration"
+        }
+      }
+    ]
+  },
+  {
+    "title": {
+      "vi": "Vận hành & dữ liệu",
+      "en": "Operations & data"
+    },
+    "items": [
+      {
+        "label": {
+          "vi": "Sao lưu cơ sở dữ liệu theo lịch hoặc thủ công, tải về khi cần",
+          "en": "Scheduled or on-demand database backups with download"
+        }
+      },
+      {
+        "label": {
+          "vi": "Nhập bộ dữ liệu mẫu để khởi chạy shop mới nhanh hơn",
+          "en": "Import starter data to launch a new shop faster"
+        }
+      }
+    ]
+  }
+]

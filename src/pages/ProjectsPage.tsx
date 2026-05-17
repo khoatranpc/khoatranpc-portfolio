@@ -60,6 +60,20 @@ export function ProjectsPage() {
             messageKey="projects.introLines"
             className="max-w-2xl font-body-md text-on-surface-variant"
           />
+          <div className="mt-md flex flex-col gap-sm sm:flex-row sm:items-center">
+            <Link
+              to="/work"
+              className="inline-flex w-fit items-center gap-1 rounded-lg bg-secondary px-md py-sm font-label-caps text-label-caps text-on-secondary transition-all hover:brightness-110 active:scale-95"
+            >
+              <span className="material-symbols-outlined text-lg" aria-hidden>
+                grid_view
+              </span>
+              {t("projects.viewDemos")}
+            </Link>
+            <p className="font-body-md text-sm text-on-surface-variant">
+              {t("projects.viewDemosHint")}
+            </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 gap-md md:grid-cols-12">

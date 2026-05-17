@@ -1,0 +1,386 @@
+{
+  "projects": [
+    {
+      "slug": "fpt-lms-online-exams",
+      "imageFolder": "fpt-lms-online-exams",
+      "featured": true,
+      "publishedAt": "2024-06-01",
+      "domain": "edtech",
+      "projectType": "web",
+      "roles": ["fullstack"],
+      "status": "live",
+      "stack": {
+        "fe": ["React", "TypeScript"],
+        "be": ["Express", "MongoDB"],
+        "infra": ["Redis"]
+      },
+      "thumbnailFile": "",
+      "demoImages": [
+        {
+          "file": "img1.png",
+          "alt": {
+            "vi": "Ảnh demo 1 — FPT IS LMS",
+            "en": "Demo screenshot 1 — FPT IS LMS"
+          }
+        },
+        {
+          "file": "img2.png",
+          "alt": {
+            "vi": "Ảnh demo 2 — FPT IS LMS",
+            "en": "Demo screenshot 2 — FPT IS LMS"
+          }
+        }
+      ],
+      "title": {
+        "vi": "Hệ thống Học tập & Thi cử trực tuyến (FPT IS)",
+        "en": "Online learning & exams (FPT IS)"
+      },
+      "pitch": {
+        "vi": "Fullstack LMS & thi trực tuyến (React, Express, TypeScript, MongoDB, Redis) — tối ưu truy vấn nghiệp vụ nặng.",
+        "en": "Fullstack LMS & online exams (React, Express, TypeScript, MongoDB, Redis) — tuning the heaviest business queries."
+      },
+      "problem": {
+        "vi": "Các truy vấn database nghiệp vụ nặng nhất chạy chậm (~10 giây), ảnh hưởng trải nghiệm và vận hành trong tải thật.",
+        "en": "The heaviest business database queries ran very slowly (~10s), hurting UX and operations under real load."
+      },
+      "solution": {
+        "vi": "Xây chiến thuật query, indexing MongoDB, tổ chức lại dữ liệu; dùng Redis và job background realtime.",
+        "en": "Query strategy, MongoDB indexing, data organization; Redis and realtime background jobs."
+      },
+      "roleDetail": {
+        "vi": "Fullstack — React, Express, TypeScript, MongoDB, Redis; tối ưu hiệu năng database và luồng nghiệp vụ nặng.",
+        "en": "Fullstack — React, Express, TypeScript, MongoDB, Redis; database performance and heavy business flows."
+      },
+      "results": [
+        {
+          "vi": "Truy vấn nghiệp vụ nặng nhất: từ ~10 giây xuống dưới 1.000ms.",
+          "en": "Heaviest business queries: from ~10s down to under 1,000ms."
+        },
+        {
+          "vi": "Chiến thuật query, indexing DB, tổ chức dữ liệu và job background realtime.",
+          "en": "Query tactics, DB indexing, data layout, and realtime background jobs."
+        }
+      ],
+      "deliverables": [
+        {
+          "vi": "Tính năng fullstack: React, Express, TypeScript",
+          "en": "Fullstack features: React, Express, TypeScript"
+        },
+        {
+          "vi": "Tối ưu MongoDB (query, index, tổ chức DB) + Redis & job background",
+          "en": "MongoDB tuning (queries, indexes, layout) + Redis & background jobs"
+        }
+      ]
+    },
+    {
+      "slug": "securities-trading-terminal",
+      "imageFolder": "securities-trading-terminal",
+      "featured": true,
+      "publishedAt": "2023-07-01",
+      "domain": "fintech",
+      "projectType": "realtime",
+      "roles": ["frontend"],
+      "status": "live",
+      "stack": {
+        "fe": ["React", "TypeScript", "WebSockets"],
+        "be": ["Node.js"],
+        "infra": ["Redis"]
+      },
+      "thumbnailFile": "image1.png",
+      "demoImages": [
+        {
+          "file": "image1.png",
+          "alt": {
+            "vi": "Ảnh demo 1 — terminal chứng khoán",
+            "en": "Demo screenshot 1 — trading terminal"
+          }
+        },
+        {
+          "file": "image2.png",
+          "alt": {
+            "vi": "Ảnh demo 2 — terminal chứng khoán",
+            "en": "Demo screenshot 2 — trading terminal"
+          }
+        },
+        {
+          "file": "image3.png",
+          "alt": {
+            "vi": "Ảnh demo 3 — terminal chứng khoán",
+            "en": "Demo screenshot 3 — trading terminal"
+          }
+        },
+        {
+          "file": "image4.png",
+          "alt": {
+            "vi": "Ảnh demo 4 — terminal chứng khoán",
+            "en": "Demo screenshot 4 — trading terminal"
+          }
+        },
+        {
+          "file": "image5.png",
+          "alt": {
+            "vi": "Ảnh demo 5 — terminal chứng khoán",
+            "en": "Demo screenshot 5 — trading terminal"
+          }
+        },
+        {
+          "file": "image6.png",
+          "alt": {
+            "vi": "Ảnh demo 6 — terminal chứng khoán",
+            "en": "Demo screenshot 6 — trading terminal"
+          }
+        },
+        {
+          "file": "image7.png",
+          "alt": {
+            "vi": "Ảnh demo 7 — terminal chứng khoán",
+            "en": "Demo screenshot 7 — trading terminal"
+          }
+        },
+        {
+          "file": "image8.png",
+          "alt": {
+            "vi": "Ảnh demo 8 — terminal chứng khoán",
+            "en": "Demo screenshot 8 — trading terminal"
+          }
+        },
+        {
+          "file": "image9.png",
+          "alt": {
+            "vi": "Ảnh demo 9 — terminal chứng khoán",
+            "en": "Demo screenshot 9 — trading terminal"
+          }
+        },
+        {
+          "file": "image10.png",
+          "alt": {
+            "vi": "Ảnh demo 10 — terminal chứng khoán",
+            "en": "Demo screenshot 10 — trading terminal"
+          }
+        },
+        {
+          "file": "image11.png",
+          "alt": {
+            "vi": "Ảnh demo 11 — terminal chứng khoán",
+            "en": "Demo screenshot 11 — trading terminal"
+          }
+        }
+      ],
+      "title": {
+        "vi": "Nền tảng Giao dịch Chứng khoán",
+        "en": "Securities trading platform"
+      },
+      "pitch": {
+        "vi": "Terminal realtime cho Mas Mirae Asset & JBSV — tối ưu render, WebSocket và UX độ trễ thấp.",
+        "en": "Realtime terminals for Mas Mirae Asset & JBSV — render tuning, WebSockets, low-latency UX."
+      },
+      "problem": {
+        "vi": "Luồng giá tick dày đặc gây lag UI, render biểu đồ chậm và độ trễ cập nhật giá từ server tới màn hình cao.",
+        "en": "Dense tick streams caused UI lag, slow chart rendering, and high server-to-screen price latency."
+      },
+      "solution": {
+        "vi": "Tối ưu front-end, virtualized list, memoization component; tinh chỉnh WebSocket và đo Chrome Performance.",
+        "en": "Front-end tuning, virtualized lists, component memoization; WebSocket tuning with Chrome Performance profiling."
+      },
+      "roleDetail": {
+        "vi": "Lập trình viên Frontend — hiệu năng UI, biểu đồ realtime, WebSocket.",
+        "en": "Frontend engineer — UI performance, realtime charts, WebSockets."
+      },
+      "results": [
+        {
+          "vi": "Cải thiện lên tới 60% tốc độ render biểu đồ realtime, ~60fps với hàng nghìn bản tin/giây.",
+          "en": "Up to ~60% faster realtime chart rendering, ~60fps with thousands of messages/sec."
+        },
+        {
+          "vi": "Giảm độ trễ cập nhật giá server → UI xuống dưới 100ms (điều kiện kiểm thử).",
+          "en": "Server→UI price updates under ~100ms (test conditions)."
+        }
+      ],
+      "deliverables": [
+        {
+          "vi": "Component tối ưu cho bảng giá và biểu đồ",
+          "en": "Optimized price table and chart components"
+        },
+        {
+          "vi": "Luồng WebSocket ổn định cho tick dày",
+          "en": "Stable WebSocket flows for dense ticks"
+        }
+      ]
+    },
+    {
+      "slug": "mindx-ai-edtech",
+      "imageFolder": "mindx-ai-edtech",
+      "featured": true,
+      "publishedAt": "2023-03-01",
+      "domain": "edtech",
+      "projectType": "ai",
+      "roles": ["fullstack", "backend"],
+      "status": "live",
+      "stack": {
+        "fe": ["Next.js", "React", "TypeScript"],
+        "be": ["Node.js", "Python"],
+        "infra": ["AWS", "Docker"]
+      },
+      "thumbnailFile": "",
+      "demoImages": [],
+      "title": {
+        "vi": "Hệ sinh thái Giáo dục & AI (MindX Tech)",
+        "en": "Education ecosystem & AI (MindX Tech)"
+      },
+      "pitch": {
+        "vi": "Sản phẩm Edtech tích hợp OpenAI/Gemini — tự động hóa phân loại tin nhắn và hỗ trợ CSKH.",
+        "en": "Edtech product with OpenAI/Gemini — automated message classification and CS support."
+      },
+      "problem": {
+        "vi": "Khối lượng tin nhắn học viên lớn, CSKH xử lý thủ công tốn thời gian; R&D nội dung đào tạo chậm.",
+        "en": "High learner message volume and slow manual CS; training content R&D was slow."
+      },
+      "solution": {
+        "vi": "Pipeline AI phân loại tin nhắn, tích hợp API OpenAI/Gemini; công cụ hỗ trợ R&D nội dung đào tạo.",
+        "en": "AI classification pipelines with OpenAI/Gemini APIs; tooling to speed training content R&D."
+      },
+      "roleDetail": {
+        "vi": "Kỹ sư phần mềm & đào tạo — sản phẩm AI, fullstack, mentoring học viên.",
+        "en": "Software engineer & training lead — AI product, fullstack, learner mentoring."
+      },
+      "results": [
+        {
+          "vi": "Tự động phân loại lên tới 80% tin nhắn học viên/tháng.",
+          "en": "Automated classification for up to 80% of learner messages per month."
+        },
+        {
+          "vi": "Giảm lên tới 40% thời gian xử lý CS thủ công.",
+          "en": "Up to 40% less manual CS handling time."
+        },
+        {
+          "vi": "500+ học viên; tỷ lệ hoàn thành khóa lập trình lên tới 90%.",
+          "en": "500+ learners; up to 90% programming course completion."
+        }
+      ],
+      "deliverables": [
+        {
+          "vi": "Tích hợp AI production (OpenAI/Gemini)",
+          "en": "Production AI integration (OpenAI/Gemini)"
+        },
+        {
+          "vi": "Luồng phân loại và dashboard vận hành",
+          "en": "Classification flows and operations views"
+        }
+      ]
+    },
+    {
+      "slug": "rent-shop-erp",
+      "imageFolder": "rent-shop-erp",
+      "featured": false,
+      "publishedAt": "2022-11-01",
+      "domain": "erp",
+      "projectType": "web",
+      "roles": ["fullstack"],
+      "status": "demo",
+      "stack": {
+        "fe": ["React", "TypeScript"],
+        "be": ["Node.js", "Express"],
+        "infra": ["MongoDB"]
+      },
+      "thumbnailFile": "thumbnail.png",
+      "demoImages": [],
+      "title": {
+        "vi": "Rent-Shop — Hệ thống quản lý cho thuê",
+        "en": "Rent-Shop — rental management platform"
+      },
+      "pitch": {
+        "vi": "Phần mềm web trọn gói cho shop cho thuê đồ: khách xem hàng online, nhân viên xử lý đơn, thu chi và báo cáo trên cùng một nền tảng.",
+        "en": "All-in-one web software for rental shops: public browsing, order handling, cash flow, and reporting in one place."
+      },
+      "problem": {
+        "vi": "Sổ sách và Excel khó theo kịp tồn kho, hay sai phí thuê và mất dấu tiền vào — ra.",
+        "en": "Spreadsheets struggle to keep up with stock, rental fees get miscalculated, and cash flow becomes hard to track."
+      },
+      "solution": {
+        "vi": "Gom quy trình từ danh mục, đơn thuê, hóa đơn đến thu chi — giảm thao tác thủ công và có số liệu rõ ràng.",
+        "en": "One flow from catalog and orders to invoices and cash records — less manual work and clearer numbers."
+      },
+      "roleDetail": {
+        "vi": "Phụ trách fullstack: luồng nghiệp vụ, giao diện quản trị và API phía server.",
+        "en": "Full-stack ownership: business flows, admin UI, and server-side APIs."
+      },
+      "results": [
+        {
+          "vi": "Tồn kho, đơn thuê và dòng tiền nằm chung một hệ thống, không phải đối chiếu nhiều file.",
+          "en": "Inventory, rental orders, and cash flow live in one system instead of scattered files."
+        },
+        {
+          "vi": "Tính phí và xuất hóa đơn theo quy tắc shop — hạn chế sai sót khi cao điểm.",
+          "en": "Fees and invoices follow shop rules — fewer mistakes during busy periods."
+        }
+      ],
+      "deliverables": [
+        {
+          "vi": "Trang công khai + khu vực quản trị cho nhân viên",
+          "en": "Public storefront plus staff admin area"
+        },
+        {
+          "vi": "Module đơn thuê, khách hàng, thu chi và dashboard",
+          "en": "Rental orders, customers, cash flow, and dashboard modules"
+        }
+      ]
+    },
+    {
+      "slug": "japan-job-platform",
+      "imageFolder": "japan-job-platform",
+      "featured": false,
+      "publishedAt": "2022-05-01",
+      "domain": "saas",
+      "projectType": "web",
+      "roles": ["frontend", "fullstack"],
+      "status": "live",
+      "stack": {
+        "fe": ["Nuxt.js", "Vue", "TypeScript"],
+        "be": ["Node.js"],
+        "infra": ["AWS"]
+      },
+      "thumbnailFile": "",
+      "demoImages": [],
+      "title": {
+        "vi": "Japan Job Platform",
+        "en": "Japan Job Platform"
+      },
+      "pitch": {
+        "vi": "Nền tảng tuyển dụng — tối ưu tìm kiếm, SEO và trải nghiệm người dùng.",
+        "en": "Recruitment platform — search, SEO, and user experience optimization."
+      },
+      "problem": {
+        "vi": "Trang việc làm khó lên top Google, công cụ tìm kiếm nội bộ chưa phù hợp nhu cầu người dùng.",
+        "en": "Job listings struggled on Google; on-site search did not match user needs."
+      },
+      "solution": {
+        "vi": "Tối ưu SEO technical, cấu trúc nội dung và search front-end trên Nuxt.js.",
+        "en": "Technical SEO, content structure, and front-end search on Nuxt.js."
+      },
+      "roleDetail": {
+        "vi": "Phát triển front-end / fullstack — SEO, search và UI.",
+        "en": "Front-end / fullstack — SEO, search, and UI."
+      },
+      "results": [
+        {
+          "vi": "Tối ưu công cụ tìm kiếm và chuẩn SEO.",
+          "en": "Search tooling and SEO standards improved."
+        },
+        {
+          "vi": "Mục tiêu hiển thị trang đầu Google cho từ khóa mục tiêu.",
+          "en": "Targeting first-page Google visibility for key terms."
+        }
+      ],
+      "deliverables": [
+        {
+          "vi": "Trang listing và search tối ưu",
+          "en": "Optimized listing and search pages"
+        },
+        {
+          "vi": "Cấu trúc SEO on-page",
+          "en": "On-page SEO structure"
+        }
+      ]
+    }
+  ]
+}

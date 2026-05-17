@@ -7,11 +7,12 @@ export function ExperiencePage() {
 
   const skillRows = useMemo(
     () => [
-      { label: t('experience.skillMern'), tenure: t('experience.skillMernTenure') },
+      { label: t('experience.skillBackend'), tenure: t('experience.skillBackendTenure') },
       { label: t('experience.skillMicroservices'), tenure: t('experience.skillMicroservicesTenure') },
-      { label: t('experience.skillKafkaWs'), tenure: t('experience.skillKafkaWsTenure') },
-      { label: t('experience.skillCleanDdd'), tenure: t('experience.skillCleanDddTenure') },
       { label: t('experience.skillPython'), tenure: t('experience.skillPythonTenure') },
+      { label: t('experience.skillFrontend'), tenure: t('experience.skillFrontendTenure') },
+      { label: t('experience.skillRealtimeUi'), tenure: t('experience.skillRealtimeUiTenure') },
+      { label: t('experience.skillRedis'), tenure: t('experience.skillRedisTenure') },
       { label: t('experience.skillAwsDocker'), tenure: t('experience.skillAwsDockerTenure') },
     ],
     [t],
@@ -27,7 +28,7 @@ export function ExperiencePage() {
   )
 
   const tags = useMemo(
-    () => ['Microservices', 'Clean Architecture', 'DDD', 'MongoDB', 'gRPC', 'Kafka', 'WebSockets'],
+    () => ['Microservices', 'Clean Architecture', 'DDD', 'MongoDB', 'gRPC', 'Redis', 'WebSockets'],
     [],
   )
 
