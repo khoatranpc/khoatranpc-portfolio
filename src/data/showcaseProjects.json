@@ -283,7 +283,78 @@
         "infra": ["MongoDB"]
       },
       "thumbnailFile": "thumbnail.png",
-      "demoImages": [],
+      "demoImages": [
+        {
+          "file": "image1.png",
+          "alt": {
+            "vi": "Ảnh demo 1 — Rent-Shop",
+            "en": "Demo screenshot 1 — Rent-Shop"
+          }
+        },
+        {
+          "file": "image2.png",
+          "alt": {
+            "vi": "Ảnh demo 2 — Rent-Shop",
+            "en": "Demo screenshot 2 — Rent-Shop"
+          }
+        },
+        {
+          "file": "image3.png",
+          "alt": {
+            "vi": "Ảnh demo 3 — Rent-Shop",
+            "en": "Demo screenshot 3 — Rent-Shop"
+          }
+        },
+        {
+          "file": "image4.png",
+          "alt": {
+            "vi": "Ảnh demo 4 — Rent-Shop",
+            "en": "Demo screenshot 4 — Rent-Shop"
+          }
+        },
+        {
+          "file": "image5.png",
+          "alt": {
+            "vi": "Ảnh demo 5 — Rent-Shop",
+            "en": "Demo screenshot 5 — Rent-Shop"
+          }
+        },
+        {
+          "file": "image6.png",
+          "alt": {
+            "vi": "Ảnh demo 6 — Rent-Shop",
+            "en": "Demo screenshot 6 — Rent-Shop"
+          }
+        },
+        {
+          "file": "image7.png",
+          "alt": {
+            "vi": "Ảnh demo 7 — Rent-Shop",
+            "en": "Demo screenshot 7 — Rent-Shop"
+          }
+        },
+        {
+          "file": "image8.png",
+          "alt": {
+            "vi": "Ảnh demo 8 — Rent-Shop",
+            "en": "Demo screenshot 8 — Rent-Shop"
+          }
+        },
+        {
+          "file": "image9.png",
+          "alt": {
+            "vi": "Ảnh demo 9 — Rent-Shop",
+            "en": "Demo screenshot 9 — Rent-Shop"
+          }
+        },
+        {
+          "file": "image10.png",
+          "alt": {
+            "vi": "Ảnh demo 10 — Rent-Shop",
+            "en": "Demo screenshot 10 — Rent-Shop"
+          }
+        }
+      ],
       "seo": {
         "title": {
           "vi": "Rent-Shop — Phần mềm quản lý cho thuê đồ",
