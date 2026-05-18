@@ -8,8 +8,9 @@ import { ShowcaseThumbnail } from '../components/ShowcaseThumbnail'
 import {
   allStackTags,
   buildShowcaseProjectJsonLd,
+  getProjectOgImageAlt,
+  getProjectOgImageSrc,
   getProjectSeo,
-  getProjectThumbnailSrc,
   getShowcaseProject,
   pickLocalized,
   relatedShowcaseProjects,
@@ -48,7 +49,14 @@ export function WorkDetailPage() {
   const pageSeo = getProjectSeo(project, locale)
   const related = relatedShowcaseProjects(project)
   const mailSubject = `${t('work.detailMailSubject')}: ${title}`
-  const thumbnailSrc = getProjectThumbnailSrc(project)
+  const ogImageSrc = getProjectOgImageSrc(project)
+  const ogImageAlt = getProjectOgImageAlt(project, locale) ?? title
+
+  const projectJsonLd = buildShowcaseProjectJsonLd(project, locale, {
+    home: t('seo.home.title'),
+    workList: t('work.title'),
+    siteName: t('seo.siteName'),
+  })
 
   return (
     <div className="pb-xl pt-xl">
@@ -56,8 +64,10 @@ export function WorkDetailPage() {
         title={pageSeo.title}
         description={pageSeo.description}
         path={`/work/${project.slug}`}
-        imageUrl={thumbnailSrc || undefined}
-        jsonLd={buildShowcaseProjectJsonLd(project, locale)}
+        imageUrl={ogImageSrc || undefined}
+        imageAlt={ogImageAlt}
+        ogType="article"
+        jsonLd={projectJsonLd}
       />
 
       <article className="mx-auto max-w-max-width px-gutter py-xl">

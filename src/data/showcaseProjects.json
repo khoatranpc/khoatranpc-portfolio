@@ -31,6 +31,16 @@
           }
         }
       ],
+      "seo": {
+        "title": {
+          "vi": "FPT IS LMS & thi trực tuyến — Fullstack React, MongoDB",
+          "en": "FPT IS LMS & online exams — React, MongoDB fullstack"
+        },
+        "description": {
+          "vi": "Case study LMS & thi trực tuyến: tối ưu truy vấn nặng từ ~10 giây xuống dưới 1 giây. Stack React, Express, TypeScript, MongoDB, Redis.",
+          "en": "LMS & online exams case study: heaviest queries from ~10s to under 1s. React, Express, TypeScript, MongoDB, Redis."
+        }
+      },
       "title": {
         "vi": "Hệ thống Học tập & Thi cử trực tuyến (FPT IS)",
         "en": "Online learning & exams (FPT IS)"
@@ -166,6 +176,16 @@
           }
         }
       ],
+      "seo": {
+        "title": {
+          "vi": "Terminal giao dịch chứng khoán realtime — Mas Mirae & JBSV",
+          "en": "Realtime securities trading terminal — Mas Mirae & JBSV"
+        },
+        "description": {
+          "vi": "Case study terminal chứng khoán: render biểu đồ nhanh hơn ~60%, WebSocket giá server→UI dưới 100ms. React, TypeScript.",
+          "en": "Trading terminal case study: ~60% faster chart rendering, server→UI price updates under ~100ms. React, TypeScript."
+        }
+      },
       "title": {
         "vi": "Nền tảng Giao dịch Chứng khoán",
         "en": "Securities trading platform"
@@ -223,6 +243,16 @@
       },
       "thumbnailFile": "",
       "demoImages": [],
+      "seo": {
+        "title": {
+          "vi": "MindX Tech — Edtech & AI phân loại tin nhắn học viên",
+          "en": "MindX Tech — Edtech & AI learner message classification"
+        },
+        "description": {
+          "vi": "Case study Edtech + AI: tự động phân loại tới 80% tin nhắn, giảm 40% thời gian CSKH. Next.js, Node.js, OpenAI/Gemini.",
+          "en": "Edtech + AI case study: up to 80% message classification, 40% less manual CS. Next.js, Node.js, OpenAI/Gemini."
+        }
+      },
       "title": {
         "vi": "Hệ sinh thái Giáo dục & AI (MindX Tech)",
         "en": "Education ecosystem & AI (MindX Tech)"
@@ -422,6 +452,16 @@
       },
       "thumbnailFile": "",
       "demoImages": [],
+      "seo": {
+        "title": {
+          "vi": "Japan Job Platform — Tuyển dụng & SEO Next.js",
+          "en": "Japan Job Platform — recruitment & Next.js SEO"
+        },
+        "description": {
+          "vi": "Case study nền tảng tuyển dụng: tối ưu SEO technical, search nội bộ và UX trên Next.js, React, TypeScript.",
+          "en": "Recruitment platform case study: technical SEO, on-site search, and UX on Next.js, React, TypeScript."
+        }
+      },
       "title": {
         "vi": "Japan Job Platform",
         "en": "Japan Job Platform"

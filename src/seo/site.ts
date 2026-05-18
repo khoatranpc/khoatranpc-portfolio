@@ -28,3 +28,11 @@ export function getOgImageUrl(): string {
   if (full) return full
   return absoluteUrl('/favicon.svg')
 }
+
+/** Path Vite (`/assets/...`) hoặc URL tuyệt đối → URL tuyệt đối cho OG / JSON-LD. */
+export function resolveAssetUrl(path: string): string {
+  const trimmed = path.trim()
+  if (!trimmed) return ''
+  if (trimmed.startsWith('http')) return trimmed
+  return absoluteUrl(trimmed)
+}

@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async'
 import { useI18n } from '../i18n/useI18n'
-import { absoluteUrl, getOgImageUrl, getSiteOrigin } from '../seo/site'
+import { absoluteUrl, getOgImageUrl, getSiteOrigin, resolveAssetUrl } from '../seo/site'
 
 export type SeoProps = {
   /** Tiêu đề trang (chưa gồm suffix thương hiệu) */
@@ -10,9 +10,18 @@ export type SeoProps = {
   path: string
   /** Ghi đè og:image / twitter:image (URL tuyệt đối hoặc path /... đã có origin) */
   imageUrl?: string
+  /** Mô tả ảnh preview (og:image:alt, accessibility) */
+  imageAlt?: string
+  /** Open Graph type — trang chi tiết nên dùng article */
+  ogType?: 'website' | 'article'
   noIndex?: boolean
   /** JSON-LD (Person, WebSite, …) */
-  jsonLd?: Record<string, unknown>
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[]
+}
+
+function resolveSeoImage(imageUrl?: string): string {
+  if (!imageUrl) return getOgImageUrl()
+  return resolveAssetUrl(imageUrl)
 }
 
 export function Seo({
@@ -20,6 +29,8 @@ export function Seo({
   description,
   path,
   imageUrl,
+  imageAlt,
+  ogType = 'website',
   noIndex,
   jsonLd,
 }: SeoProps) {
@@ -27,17 +38,19 @@ export function Seo({
   const suffix = t('seo.brandSuffix')
   const fullTitle = `${title}${suffix}`
   const canonical = absoluteUrl(path)
-  const image = imageUrl?.startsWith('http')
-    ? imageUrl
-    : imageUrl
-      ? absoluteUrl(imageUrl)
-      : getOgImageUrl()
+  const image = resolveSeoImage(imageUrl)
   const ogLocale = locale === 'vi' ? 'vi_VN' : 'en_US'
   const siteName = t('seo.siteName')
   const origin = getSiteOrigin()
+  const jsonLdBlocks = jsonLd
+    ? Array.isArray(jsonLd)
+      ? jsonLd
+      : [jsonLd]
+    : []
 
   return (
     <Helmet>
+      <html lang={locale === 'vi' ? 'vi' : 'en'} />
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       {noIndex ? (
@@ -49,20 +62,24 @@ export function Seo({
 
       <meta property="og:site_name" content={siteName} />
       <meta property="og:locale" content={ogLocale} />
-      <meta property="og:type" content="website" />
+      <meta property="og:type" content={ogType} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonical} />
       <meta property="og:image" content={image} />
+      {imageAlt ? <meta property="og:image:alt" content={imageAlt} /> : null}
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
+      {imageAlt ? <meta name="twitter:image:alt" content={imageAlt} /> : null}
 
-      {jsonLd ? (
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      ) : null}
+      {jsonLdBlocks.map((block, index) => (
+        <script key={index} type="application/ld+json">
+          {JSON.stringify(block)}
+        </script>
+      ))}
     </Helmet>
   )
 }

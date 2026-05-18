@@ -2,7 +2,7 @@ import rentShopFeatureModules from '../data/rentShopFeatureModules.json'
 import showcaseData from '../data/showcaseProjects.json'
 import type { Locale } from '../i18n/messages'
 import { resolveShowcaseAssetPath } from './showcaseAssets'
-import { absoluteUrl } from '../seo/site'
+import { absoluteUrl, resolveAssetUrl } from '../seo/site'
 import type {
   LocalizedString,
   ResolvedShowcaseImage,
@@ -45,6 +45,29 @@ export function getProjectThumbnailSrc(project: ShowcaseProject): string {
   return resolveShowcaseAssetPath(project.imageFolder, file)
 }
 
+/** Ảnh dùng cho og:image — thumbnail, nếu không có thì ảnh demo đầu tiên. */
+export function getProjectOgImageSrc(project: ShowcaseProject): string {
+  const thumb = getProjectThumbnailSrc(project)
+  if (thumb) return thumb
+  const firstDemo = project.demoImages?.[0]?.file?.trim() ?? ''
+  if (!firstDemo) return ''
+  return resolveShowcaseAssetPath(project.imageFolder, firstDemo)
+}
+
+export function getProjectOgImageAlt(
+  project: ShowcaseProject,
+  locale: Locale,
+): string | undefined {
+  const thumbFile = project.thumbnailFile?.trim()
+  if (thumbFile) {
+    const entry = project.demoImages?.find((img) => img.file === thumbFile)
+    if (entry?.alt) return pickLocalized(entry.alt, locale)
+  }
+  const first = project.demoImages?.[0]
+  if (first?.alt) return pickLocalized(first.alt, locale)
+  return undefined
+}
+
 export function getProjectSeo(
   project: ShowcaseProject,
   locale: Locale,
@@ -59,22 +82,84 @@ export function getProjectSeo(
   }
 }
 
+export type ShowcaseProjectJsonLdLabels = {
+  home: string
+  workList: string
+  siteName: string
+}
+
 export function buildShowcaseProjectJsonLd(
   project: ShowcaseProject,
   locale: Locale,
+  labels: ShowcaseProjectJsonLdLabels,
 ): Record<string, unknown> {
   const { title, description } = getProjectSeo(project, locale)
   const path = `/work/${project.slug}`
-  const thumb = getProjectThumbnailSrc(project)
+  const pageUrl = absoluteUrl(path)
+  const origin = absoluteUrl('/')
+  const workListUrl = absoluteUrl('/work')
+  const imageSrc = getProjectOgImageSrc(project)
+  const imageUrl = imageSrc ? resolveAssetUrl(imageSrc) : undefined
+  const breadcrumbId = `${pageUrl}#breadcrumb`
 
   return {
     '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
-    name: title,
-    description,
-    url: absoluteUrl(path),
-    applicationCategory: 'BusinessApplication',
-    ...(thumb ? { image: thumb.startsWith('http') ? thumb : absoluteUrl(thumb) } : {}),
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        '@id': breadcrumbId,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: labels.home,
+            item: origin,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: labels.workList,
+            item: workListUrl,
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: title,
+            item: pageUrl,
+          },
+        ],
+      },
+      {
+        '@type': 'WebPage',
+        '@id': pageUrl,
+        url: pageUrl,
+        name: title,
+        description,
+        inLanguage: locale === 'vi' ? 'vi-VN' : 'en-US',
+        isPartOf: {
+          '@type': 'WebSite',
+          name: labels.siteName,
+          url: origin,
+        },
+        breadcrumb: { '@id': breadcrumbId },
+        ...(imageUrl
+          ? {
+              primaryImageOfPage: {
+                '@type': 'ImageObject',
+                url: imageUrl,
+              },
+            }
+          : {}),
+        mainEntity: {
+          '@type': 'CreativeWork',
+          name: title,
+          description,
+          url: pageUrl,
+          datePublished: project.publishedAt,
+          ...(imageUrl ? { image: imageUrl } : {}),
+        },
+      },
+    ],
   }
 }
 
