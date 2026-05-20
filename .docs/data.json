@@ -101,7 +101,7 @@
       "title": "Hệ thống Quản lý Cửa hàng Cho Thuê",
       "company": "Freelance",
       "description": "Phần mềm quản lý trọn gói dành cho các mô hình kinh doanh cho thuê đồ.",
-      "techStack": ["NestJS", "Next.js"],
+      "techStack": ["NestJS", "React", "MongoDB", "Docker"],
       "highlights": [
         "Xây dựng hệ thống bài bản giúp chủ cửa hàng dễ dàng quản lý dòng tiền, sản phẩm, tự động hóa quy trình tính phí và giảm thiểu sai sót."
       ],

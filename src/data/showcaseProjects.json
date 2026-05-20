@@ -309,8 +309,8 @@
       "status": "demo",
       "stack": {
         "fe": ["React", "TypeScript"],
-        "be": ["Node.js", "Express"],
-        "infra": ["MongoDB"]
+        "be": ["NestJS", "Node.js"],
+        "infra": ["MongoDB", "Docker"]
       },
       "thumbnailFile": "thumbnail.png",
       "demoImages": [
